@@ -10,24 +10,31 @@ import UIKit
 
 class ViewController: UIViewController {
     
+
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var tempImageView: UIImageView!
     @IBOutlet weak var opacitySlider: UISlider!
     @IBOutlet weak var brashWidthSlider: UISlider!
-    @IBOutlet weak var tempImageView: UIImageView!
-    @IBOutlet weak var ColorSlideView: UIView!
-    @IBOutlet var imageView: UIImageView!
+    @IBOutlet weak var colorSlideView: UIView!
+
+
     @IBAction func saveImage(_ sender: AnyObject) {
         if let image = self.imageView.image {
             UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(image:withPotentialError:contextInfo:)), nil)
         }
     }
-    
-    @IBAction func OpacityChanged(_ sender: UISlider) {
+
+    @IBAction func changeOpacity(_ sender: UISlider) {
         self.opacity = CGFloat(sender.value)
     }
-    @IBAction func BrashWidthChanged(_ sender: UISlider) {
+    
+
+    @IBAction func changeBrashWidth(_ sender: UISlider) {
         self.lineWidth = CGFloat(sender.value)
     }
-    @IBAction func ChooseColor(_ sender: UIButton) {
+
+
+    @IBAction func chooseColor(_ sender: AnyObject) {
         print(sender.tag)
         if(sender.tag > 0 && sender.tag < fixColors.count){
             (red, green, blue) = fixColors[sender.tag]
@@ -35,7 +42,15 @@ class ViewController: UIViewController {
         else{
             (red, green, blue) = fixColors[0]
         }
-        
+    }
+
+    @IBAction func clearImage(_ sender: UIButton) {
+        self.imageView.image = nil
+        self.imageView.layer.sublayers = nil
+        self.tempImageView.layer.sublayers = nil
+    }
+    @IBAction func chooseTool(_ sender: UIButton) {
+        self.tool = sender.tag
     }
     
     var lastPoint:CGPoint!
@@ -45,7 +60,7 @@ class ViewController: UIViewController {
     var blue:CGFloat = (0.0/255.0)
     var lineWidth:CGFloat = 9.0
     var opacity:CGFloat = 1.0
-    var tool: Int = 1
+    var tool: Int = 0
     var keyboardHeight = 450
     let fixColors : [(CGFloat, CGFloat, CGFloat)] = [
         (0, 0, 0),
@@ -69,9 +84,6 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func undoDrawing(_ sender: AnyObject) {
-        self.imageView.image = nil
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -80,7 +92,7 @@ class ViewController: UIViewController {
         blue = (0.0/255.0)
         let colorSlider = ColorSlider()
         colorSlider.frame = CGRect(x: 0, y: 0, width: 50, height: 200)
-        ColorSlideView.addSubview(colorSlider)
+        colorSlideView.addSubview(colorSlider)
         colorSlider.addTarget(self, action: #selector(changedColor(slider:)), for: .valueChanged)
         colorSlider.previewEnabled = true
         //colorSlider.orientation = .horizontal
@@ -197,7 +209,7 @@ class ViewController: UIViewController {
                 shapeLayer.strokeColor = UIColor(red: red, green: green, blue: blue, alpha: opacity).cgColor
                 shapeLayer.fillColor = UIColor(red: red, green: green, blue: blue, alpha: opacity).cgColor
                 shapeLayer.lineWidth = lineWidth
-                self.imageView.layer.addSublayer(shapeLayer)
+                self.tempImageView.layer.addSublayer(shapeLayer)
                 
             }
         }
@@ -208,6 +220,7 @@ class ViewController: UIViewController {
         UIGraphicsEndImageContext()
         
         self.tempImageView.image = nil
+        self.imageView.layer.sublayers = nil
     }
     
     
