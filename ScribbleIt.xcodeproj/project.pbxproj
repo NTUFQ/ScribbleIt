@@ -16,6 +16,9 @@
 		070076CE1D9E36C80017D22C /* ScribbleItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070076CD1D9E36C80017D22C /* ScribbleItUITests.swift */; };
 		070076DC1D9E675B0017D22C /* SwiftColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */; };
 		07736AED1DAA005B002BA895 /* ColorSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07736AEC1DAA005B002BA895 /* ColorSlider.swift */; };
+		07D69FBB1DAA4BE800BBEA05 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D69FBA1DAA4BE800BBEA05 /* API.swift */; };
+		07D69FBE1DAA527900BBEA05 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FBC1DAA527900BBEA05 /* Alamofire.framework */; };
+		07D69FBF1DAA527900BBEA05 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FBD1DAA527900BBEA05 /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		070076CF1D9E36C80017D22C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColorPickerViewController.swift; sourceTree = "<group>"; };
 		07736AEC1DAA005B002BA895 /* ColorSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSlider.swift; sourceTree = "<group>"; };
+		07D69FBA1DAA4BE800BBEA05 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		07D69FBC1DAA527900BBEA05 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		07D69FBD1DAA527900BBEA05 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D69FBF1DAA527900BBEA05 /* SwiftyJSON.framework in Frameworks */,
+				07D69FBE1DAA527900BBEA05 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +93,8 @@
 				070076C11D9E36C80017D22C /* ScribbleItTests */,
 				070076CC1D9E36C80017D22C /* ScribbleItUITests */,
 				070076AB1D9E36C80017D22C /* Products */,
+				07D69FBC1DAA527900BBEA05 /* Alamofire.framework */,
+				07D69FBD1DAA527900BBEA05 /* SwiftyJSON.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +114,7 @@
 				070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */,
 				070076AD1D9E36C80017D22C /* AppDelegate.swift */,
 				070076AF1D9E36C80017D22C /* ViewController.swift */,
+				07D69FBA1DAA4BE800BBEA05 /* API.swift */,
 				070076B11D9E36C80017D22C /* Main.storyboard */,
 				07736AEC1DAA005B002BA895 /* ColorSlider.swift */,
 				070076B41D9E36C80017D22C /* Assets.xcassets */,
@@ -269,6 +280,7 @@
 				070076B01D9E36C80017D22C /* ViewController.swift in Sources */,
 				07736AED1DAA005B002BA895 /* ColorSlider.swift in Sources */,
 				070076AE1D9E36C80017D22C /* AppDelegate.swift in Sources */,
+				07D69FBB1DAA4BE800BBEA05 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +432,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ScribbleIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FQ.ScribbleIt;
@@ -432,6 +448,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ScribbleIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FQ.ScribbleIt;
