@@ -17,8 +17,12 @@
 		070076DC1D9E675B0017D22C /* SwiftColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */; };
 		07736AED1DAA005B002BA895 /* ColorSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07736AEC1DAA005B002BA895 /* ColorSlider.swift */; };
 		07D69FBB1DAA4BE800BBEA05 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D69FBA1DAA4BE800BBEA05 /* API.swift */; };
-		07D69FBE1DAA527900BBEA05 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FBC1DAA527900BBEA05 /* Alamofire.framework */; };
-		07D69FBF1DAA527900BBEA05 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FBD1DAA527900BBEA05 /* SwiftyJSON.framework */; };
+		07D69FC41DAA6E7200BBEA05 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FC31DAA6E7200BBEA05 /* Alamofire.framework */; };
+		07D69FC51DAA709C00BBEA05 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FC31DAA6E7200BBEA05 /* Alamofire.framework */; };
+		07D69FC61DAA709C00BBEA05 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FC31DAA6E7200BBEA05 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07D69FC91DAA70C900BBEA05 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FC81DAA70C900BBEA05 /* SwiftyJSON.framework */; };
+		07D69FCA1DAA70D200BBEA05 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FC81DAA70C900BBEA05 /* SwiftyJSON.framework */; };
+		07D69FCB1DAA70D200BBEA05 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FC81DAA70C900BBEA05 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		07D69FC71DAA709C00BBEA05 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				07D69FCB1DAA70D200BBEA05 /* SwiftyJSON.framework in Embed Frameworks */,
+				07D69FC61DAA709C00BBEA05 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		070076AA1D9E36C80017D22C /* ScribbleIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScribbleIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		070076AD1D9E36C80017D22C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,8 +74,8 @@
 		070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColorPickerViewController.swift; sourceTree = "<group>"; };
 		07736AEC1DAA005B002BA895 /* ColorSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSlider.swift; sourceTree = "<group>"; };
 		07D69FBA1DAA4BE800BBEA05 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		07D69FBC1DAA527900BBEA05 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		07D69FBD1DAA527900BBEA05 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		07D69FC31DAA6E7200BBEA05 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ScribbleIt/Alamofire.framework; sourceTree = "<group>"; };
+		07D69FC81DAA70C900BBEA05 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +83,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07D69FBF1DAA527900BBEA05 /* SwiftyJSON.framework in Frameworks */,
-				07D69FBE1DAA527900BBEA05 /* Alamofire.framework in Frameworks */,
+				07D69FCA1DAA70D200BBEA05 /* SwiftyJSON.framework in Frameworks */,
+				07D69FC41DAA6E7200BBEA05 /* Alamofire.framework in Frameworks */,
+				07D69FC51DAA709C00BBEA05 /* Alamofire.framework in Frameworks */,
+				07D69FC91DAA70C900BBEA05 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,8 +114,8 @@
 				070076C11D9E36C80017D22C /* ScribbleItTests */,
 				070076CC1D9E36C80017D22C /* ScribbleItUITests */,
 				070076AB1D9E36C80017D22C /* Products */,
-				07D69FBC1DAA527900BBEA05 /* Alamofire.framework */,
-				07D69FBD1DAA527900BBEA05 /* SwiftyJSON.framework */,
+				07D69FC81DAA70C900BBEA05 /* SwiftyJSON.framework */,
+				07D69FC31DAA6E7200BBEA05 /* Alamofire.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +173,7 @@
 				070076A61D9E36C80017D22C /* Sources */,
 				070076A71D9E36C80017D22C /* Frameworks */,
 				070076A81D9E36C80017D22C /* Resources */,
+				07D69FC71DAA709C00BBEA05 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -435,6 +457,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/ScribbleIt",
 				);
 				INFOPLIST_FILE = ScribbleIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -451,6 +474,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/ScribbleIt",
 				);
 				INFOPLIST_FILE = ScribbleIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

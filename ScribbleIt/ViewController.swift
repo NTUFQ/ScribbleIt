@@ -133,6 +133,17 @@ class ViewController: UIViewController {
         blue = (0.0/255.0)
         redoButton.isEnabled = false
         undoButton.isEnabled = false
+        //////test//////
+        let api = API()
+        api.getArtwork(pk: 5){
+            atk in
+            print("success")
+            print(atk!.pk)
+            print(atk!.comment)
+            }
+        //////test end///////
+
+        
         let colorSlider = ColorSlider()
         colorSlider.frame = CGRect(x: 0, y: 0, width: 50, height: 200)
         colorSlideView.addSubview(colorSlider)
