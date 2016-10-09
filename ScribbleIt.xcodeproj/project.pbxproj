@@ -15,6 +15,7 @@
 		070076C31D9E36C80017D22C /* ScribbleItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070076C21D9E36C80017D22C /* ScribbleItTests.swift */; };
 		070076CE1D9E36C80017D22C /* ScribbleItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070076CD1D9E36C80017D22C /* ScribbleItUITests.swift */; };
 		070076DC1D9E675B0017D22C /* SwiftColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */; };
+		07736AED1DAA005B002BA895 /* ColorSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07736AEC1DAA005B002BA895 /* ColorSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		070076CD1D9E36C80017D22C /* ScribbleItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScribbleItUITests.swift; sourceTree = "<group>"; };
 		070076CF1D9E36C80017D22C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColorPickerViewController.swift; sourceTree = "<group>"; };
+		07736AEC1DAA005B002BA895 /* ColorSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				070076AD1D9E36C80017D22C /* AppDelegate.swift */,
 				070076AF1D9E36C80017D22C /* ViewController.swift */,
 				070076B11D9E36C80017D22C /* Main.storyboard */,
+				07736AEC1DAA005B002BA895 /* ColorSlider.swift */,
 				070076B41D9E36C80017D22C /* Assets.xcassets */,
 				070076B61D9E36C80017D22C /* LaunchScreen.storyboard */,
 				070076B91D9E36C80017D22C /* Info.plist */,
@@ -264,6 +267,7 @@
 			files = (
 				070076DC1D9E675B0017D22C /* SwiftColorPickerViewController.swift in Sources */,
 				070076B01D9E36C80017D22C /* ViewController.swift in Sources */,
+				07736AED1DAA005B002BA895 /* ColorSlider.swift in Sources */,
 				070076AE1D9E36C80017D22C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +513,7 @@
 				070076D41D9E36C80017D22C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		070076D51D9E36C80017D22C /* Build configuration list for PBXNativeTarget "ScribbleItTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +522,7 @@
 				070076D71D9E36C80017D22C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		070076D81D9E36C80017D22C /* Build configuration list for PBXNativeTarget "ScribbleItUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +531,7 @@
 				070076DA1D9E36C80017D22C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
