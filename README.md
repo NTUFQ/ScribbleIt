@@ -54,6 +54,6 @@ ps: Goddamn FB only gives Objective-C tutorial
 
 -> [Standford Swift Course 2016 video, good but only if you have time](https://www.youtube.com/watch?v=_lRx1zoriPo&list=PLsJq-VuSo2k26duIWzNjXztkZ7VrbppkT)
 
-ps: you can follow the video to build a simple calculator, it takes a few hours but it helps you to getting start
+ps: you can follow the video to build a simple calculator, it takes a few hours but it helps you to getting started
 
 
