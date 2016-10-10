@@ -7,29 +7,32 @@
 //
 
 import UIKit
-import FacebookCore
 import FBSDKCoreKit
-
+import Simplicity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    // added for facebook integration
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+//        return Simplicity.application(app, open: url, options: options)
+//    }
+//    
 //    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-//        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+//        return Simplicity.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
 //    }
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        // added for fb
-        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        // return true
+    // added for facebook integration
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        let a = FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+        return a
     }
     
-    func application(_ application: UIApplication, openURL url: URL!, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url as URL!, sourceApplication: sourceApplication, annotation: annotation)
+    func application(_ app: UIApplication, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        let a = FBSDKApplicationDelegate.sharedInstance().application(app, didFinishLaunchingWithOptions: options)
+        return a
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -49,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         // added for fb
-        FBSDKAppEvents.activateApp()
+        // AppEventsLogger.activate(application)
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
