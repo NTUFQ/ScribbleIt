@@ -15,6 +15,10 @@
 		070076C31D9E36C80017D22C /* ScribbleItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070076C21D9E36C80017D22C /* ScribbleItTests.swift */; };
 		070076CE1D9E36C80017D22C /* ScribbleItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070076CD1D9E36C80017D22C /* ScribbleItUITests.swift */; };
 		070076DC1D9E675B0017D22C /* SwiftColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */; };
+		0705899A1DAC005E00AE4F8D /* Simplicity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070589991DAC005E00AE4F8D /* Simplicity.framework */; };
+		0705899B1DAC006B00AE4F8D /* Simplicity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070589991DAC005E00AE4F8D /* Simplicity.framework */; };
+		0705899C1DAC006B00AE4F8D /* Simplicity.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 070589991DAC005E00AE4F8D /* Simplicity.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		074F979C1DAC105C0081BA56 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074F979B1DAC105C0081BA56 /* MenuViewController.swift */; };
 		0767E8FA1DABB58A006691F4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FD81DABB44B00BBEA05 /* Bolts.framework */; };
 		0767E8FB1DABB58A006691F4 /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FD81DABB44B00BBEA05 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0767E8FC1DABB58A006691F4 /* FacebookCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FD91DABB44C00BBEA05 /* FacebookCore.framework */; };
@@ -74,6 +78,7 @@
 				0767E9011DABB58A006691F4 /* FacebookShare.framework in Embed Frameworks */,
 				0767E8FB1DABB58A006691F4 /* Bolts.framework in Embed Frameworks */,
 				0767E8FD1DABB58A006691F4 /* FacebookCore.framework in Embed Frameworks */,
+				0705899C1DAC006B00AE4F8D /* Simplicity.framework in Embed Frameworks */,
 				07D69FCB1DAA70D200BBEA05 /* SwiftyJSON.framework in Embed Frameworks */,
 				0767E9031DABB58A006691F4 /* FBSDKCoreKit.framework in Embed Frameworks */,
 				0767E9071DABB58A006691F4 /* FBSDKShareKit.framework in Embed Frameworks */,
@@ -101,6 +106,9 @@
 		070076CD1D9E36C80017D22C /* ScribbleItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScribbleItUITests.swift; sourceTree = "<group>"; };
 		070076CF1D9E36C80017D22C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColorPickerViewController.swift; sourceTree = "<group>"; };
+		070589981DABEAD800AE4F8D /* ScribbleIt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScribbleIt.entitlements; sourceTree = "<group>"; };
+		070589991DAC005E00AE4F8D /* Simplicity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Simplicity.framework; path = Carthage/Build/iOS/Simplicity.framework; sourceTree = "<group>"; };
+		074F979B1DAC105C0081BA56 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		07736AEC1DAA005B002BA895 /* ColorSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSlider.swift; sourceTree = "<group>"; };
 		07D69FBA1DAA4BE800BBEA05 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		07D69FC31DAA6E7200BBEA05 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ScribbleIt/Alamofire.framework; sourceTree = "<group>"; };
@@ -123,6 +131,7 @@
 				0767E9041DABB58A006691F4 /* FBSDKLoginKit.framework in Frameworks */,
 				07D69FE21DABB44C00BBEA05 /* FacebookShare.framework in Frameworks */,
 				07D69FDF1DABB44C00BBEA05 /* Bolts.framework in Frameworks */,
+				0705899B1DAC006B00AE4F8D /* Simplicity.framework in Frameworks */,
 				07D69FE41DABB44C00BBEA05 /* FBSDKLoginKit.framework in Frameworks */,
 				0767E9001DABB58A006691F4 /* FacebookShare.framework in Frameworks */,
 				0767E8FA1DABB58A006691F4 /* Bolts.framework in Frameworks */,
@@ -137,6 +146,7 @@
 				0767E9061DABB58A006691F4 /* FBSDKShareKit.framework in Frameworks */,
 				0767E9021DABB58A006691F4 /* FBSDKCoreKit.framework in Frameworks */,
 				07D69FE31DABB44C00BBEA05 /* FBSDKCoreKit.framework in Frameworks */,
+				0705899A1DAC005E00AE4F8D /* Simplicity.framework in Frameworks */,
 				07D69FC91DAA70C900BBEA05 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +192,7 @@
 		070076AC1D9E36C80017D22C /* ScribbleIt */ = {
 			isa = PBXGroup;
 			children = (
+				070589981DABEAD800AE4F8D /* ScribbleIt.entitlements */,
 				070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */,
 				070076AD1D9E36C80017D22C /* AppDelegate.swift */,
 				070076AF1D9E36C80017D22C /* ViewController.swift */,
@@ -192,6 +203,7 @@
 				070076B41D9E36C80017D22C /* Assets.xcassets */,
 				070076B61D9E36C80017D22C /* LaunchScreen.storyboard */,
 				070076B91D9E36C80017D22C /* Info.plist */,
+				074F979B1DAC105C0081BA56 /* MenuViewController.swift */,
 			);
 			path = ScribbleIt;
 			sourceTree = "<group>";
@@ -217,6 +229,7 @@
 		07D69FCD1DAA9A2500BBEA05 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				070589991DAC005E00AE4F8D /* Simplicity.framework */,
 				07D69FC81DAA70C900BBEA05 /* SwiftyJSON.framework */,
 				07D69FC31DAA6E7200BBEA05 /* Alamofire.framework */,
 				07D69FD81DABB44B00BBEA05 /* Bolts.framework */,
@@ -299,7 +312,13 @@
 				TargetAttributes = {
 					070076A91D9E36C80017D22C = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8DD869YCMY;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					070076BD1D9E36C80017D22C = {
 						CreatedOnToolsVersion = 8.0;
@@ -368,6 +387,7 @@
 				07D69FD71DAAA27300BBEA05 /* LoginViewController.swift in Sources */,
 				070076DC1D9E675B0017D22C /* SwiftColorPickerViewController.swift in Sources */,
 				070076B01D9E36C80017D22C /* ViewController.swift in Sources */,
+				074F979C1DAC105C0081BA56 /* MenuViewController.swift in Sources */,
 				07736AED1DAA005B002BA895 /* ColorSlider.swift in Sources */,
 				070076AE1D9E36C80017D22C /* AppDelegate.swift in Sources */,
 				07D69FBB1DAA4BE800BBEA05 /* API.swift in Sources */,
@@ -522,6 +542,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ScribbleIt/ScribbleIt.entitlements;
+				DEVELOPMENT_TEAM = 8DD869YCMY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -529,6 +551,7 @@
 					"$(PROJECT_DIR)/Document/FacebookSDK",
 				);
 				INFOPLIST_FILE = ScribbleIt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FQ.ScribbleIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -540,6 +563,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ScribbleIt/ScribbleIt.entitlements;
+				DEVELOPMENT_TEAM = 8DD869YCMY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -547,6 +572,7 @@
 					"$(PROJECT_DIR)/Document/FacebookSDK",
 				);
 				INFOPLIST_FILE = ScribbleIt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FQ.ScribbleIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";

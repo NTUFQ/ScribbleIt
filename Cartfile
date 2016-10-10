@@ -1,3 +1,4 @@
 github "Alamofire/Alamofire" ~> 4.0
 github "SwiftyJSON/SwiftyJSON"
 github "facebook/facebook-sdk-swift"
+github "SimplicityMobile/Simplicity"
