@@ -1,5 +1,9 @@
 # ScribbleIt
 
+## Backend
+Backend uses Django. [See here](https://github.com/NTUFQ/ScribbleIt-Backend/)
+
+
 ## Todo
 - Functionality
 - [x] Login/Logout
