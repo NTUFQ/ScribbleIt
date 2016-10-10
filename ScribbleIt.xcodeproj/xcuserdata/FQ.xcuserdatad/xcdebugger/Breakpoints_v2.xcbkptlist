@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ScribbleIt/ViewController.swift"
-            timestampString = "497716378.277524"
+            timestampString = "497792313.988624"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>

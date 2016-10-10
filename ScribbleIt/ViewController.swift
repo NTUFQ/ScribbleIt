@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DrawingViewController: UIViewController {
     
 
     @IBOutlet weak var imageView: UIImageView!
@@ -134,13 +134,16 @@ class ViewController: UIViewController {
         redoButton.isEnabled = false
         undoButton.isEnabled = false
         //////test//////
-        let api = API()
-        api.getArtwork(pk: 5){
-            atk in
-            print("success")
-            print(atk!.pk)
-            print(atk!.comment)
-            }
+//        let loginButton = FBSDKLoginButton()
+//        loginButton.center = view.center
+//        view.addSubview(loginButton)
+//        let api = API()
+//        api.getArtwork(pk: 5){
+//            atk in
+//            print("success")
+//            print(atk!.pk)
+//            print(atk!.comment)
+//            }
         //////test end///////
 
         
