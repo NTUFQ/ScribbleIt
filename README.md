@@ -32,7 +32,9 @@ Although a lot of resources online about iOS dev is stll in Objective-C and olde
 
 PLS Make use of Google, Stackoverflow and Apple's documents.
 
--> [Apple Official Doc for Swift 3.0](https://developer.apple.com/swift/)
+-> [Apple Official Doc for Swift 3.0, to search for classes/objects/methods](https://developer.apple.com/swift/)
+
+-> [Swift Programing Language in iBook Store, free and friendly for beginner](https://itunes.apple.com/sg/book/swift-programming-language/id881256329?mt=11)
 
 #### I also uses frameworks
 
