@@ -1,0 +1,10 @@
+framework module Simplicity {
+  umbrella header "Simplicity.h"
+
+  export *
+  module * { export * }
+}
+
+module Simplicity.Swift {
+    header "Simplicity-Swift.h"
+}

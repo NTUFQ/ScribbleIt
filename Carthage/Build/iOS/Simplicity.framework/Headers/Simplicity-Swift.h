@@ -115,9 +115,60 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
+@class NSCoder;
 
-@interface NSNumber (SWIFT_EXTENSION(SwiftyJSON))
-@property (nonatomic, readonly) BOOL isBool;
+/**
+  An error produced by a LoginProvider on redirecting back to the app. Error
+  domain is “Simplicity”
+*/
+SWIFT_CLASS("_TtC10Simplicity10LoginError")
+@interface LoginError : NSError
+/**
+  An error that should never happen. If seen, please open a GitHub issue.
+*/
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LoginError * _Nonnull InternalSDKError;)
++ (LoginError * _Nonnull)InternalSDKError;
+/**
+  Initializer for LoginError
+  <ul>
+    <li>
+      parameters:
+    </li>
+    <li>
+      code: Error code for the error
+    </li>
+    <li>
+      description: Localized description of the error.
+    </li>
+  </ul>
+*/
+- (nonnull instancetype)initWithCode:(NSInteger)code description:(NSString * _Nonnull)description OBJC_DESIGNATED_INITIALIZER;
+/**
+  Unimplemented stub since NSError implements  requires this init method.
+*/
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithDomain:(NSString * _Nonnull)domain code:(NSInteger)code userInfo:(NSDictionary * _Nullable)dict SWIFT_UNAVAILABLE;
+@end
+
+
+/**
+  An OAuth 2 Error response. Subclass of LoginError.
+  Error codes subject to change, so initialize a OAuth2ErrorCode enum with the
+  raw value of the error code to check.
+*/
+SWIFT_CLASS("_TtC10Simplicity11OAuth2Error")
+@interface OAuth2Error : LoginError
+/**
+  Constructs a OAuth 2 error object from an OAuth response.
+  \param callbackParameters A dictionary of OAuth 2 Error response parameters.
+
+
+  returns:
+  OAuth2Error object.
+*/
++ (LoginError * _Nullable)error:(NSDictionary<NSString *, NSString *> * _Nonnull)callbackParameters;
+- (nonnull instancetype)initWithCode:(NSInteger)code description:(NSString * _Nonnull)description OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 #pragma clang diagnostic pop

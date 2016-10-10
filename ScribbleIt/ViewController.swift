@@ -127,6 +127,7 @@ class DrawingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
         red = (0.0/255.0)
         green = (0.0/255.0)

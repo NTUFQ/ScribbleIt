@@ -8,32 +8,59 @@
 
 import Foundation
 import UIKit
-//import FacebookLogin
+import FBSDKCoreKit
 import FBSDKLoginKit
-class LoginViewController: UIViewController{ //, FBSDKLoginButtonDelegate {
+//import Simplicity
 
-//    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!){
-//        
-//    }
-//    
-//    
-//    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!){
-//        print("user is logged out")
-//    }
-//    
-//    override func viewDidLoad() {
-//        print("Login test!!!")
-//        if (FBSDKAccessToken.current() == nil) {
-//            print("User is not loged in")
+class LoginViewController: UIViewController{
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
+        if FBSDKAccessToken.current() != nil{
+            print("already logged in")
+            self.toMenu()
+        }
+    }
+    @IBAction func clickPlayAsGuest(_ sender: AnyObject) {
+        self.performSegue(withIdentifier: "LoginToMenu", sender: self)
+    }
+    
+    @IBAction func clickLogOut(_ segue: UIStoryboardSegue){}
+    
+    @IBAction func testLogin(_ sender: AnyObject) {
+        let loginManager = FBSDKLoginManager()
+        let permissions = ["public_profile", "email"]
+        let handler =  {
+            (result: FBSDKLoginManagerLoginResult?, error: Error?) in
+            if let error = error {
+                print("error = \(error.localizedDescription)")
+            } else if result!.isCancelled {
+                print("user tapped on Cancel button")
+            } else {
+                print("authenticate successfully")
+                self.toMenu()
+            }
+        }
+        loginManager.logIn(withReadPermissions: permissions, from: self, handler: handler)
+    }
+    
+    func toMenu() {
+        self.performSegue(withIdentifier: "LoginToMenu", sender: self)
+    }
+//        Simplicity.login(Facebook()){
+//            (accessToken, error) in
+//            if error != nil {
+//                print(error)
+//                return
+//            }
+//            if accessToken != nil {
+//                print(accessToken)
+//                
+//                return
+//            }
 //        }
-//        else{
-//            print("User is logged in")
-//        }
-//        let loginButton = FBSDKLoginButton()
-//        loginButton.center = self.view.center
-//        loginButton.delegate = self
-//        loginButton.readPermissions = ["public_profile", "email"]
-//        
-//        self.view.addSubview(loginButton)
-//    }
+
 }
+    
+
