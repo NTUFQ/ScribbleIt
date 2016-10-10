@@ -48,7 +48,7 @@ ps: Goddamn FB only gives Objective-C tutorial
 
 -> [Color slider](https://github.com/gizmosachin/ColorSlider)
 
-#### some tutorial or video i found useful
+#### some tutorials or videos i found useful
 
 -> ["Unwind Segue" video, when you dont know to the transit between the view controllors](https://www.youtube.com/watch?v=akmPXZ4hDuU)
 
