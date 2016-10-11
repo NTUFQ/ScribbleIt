@@ -202,7 +202,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="Opf-7a-bCs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="175.78125" y="165.625"/>
+            <point key="canvasLocation" x="1590" y="952"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Yob-ug-C6E">
@@ -260,7 +260,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQb-5W-YOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-11" y="1745"/>
+            <point key="canvasLocation" x="-567" y="952"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="xjA-t2-LOl">
@@ -313,7 +313,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dvj-A1-J8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="gEA-3P-iIb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="863.671875" y="962.5"/>
+            <point key="canvasLocation" x="861" y="952"/>
         </scene>
     </scenes>
 </document>
