@@ -8,7 +8,7 @@
 
 import UIKit
 import FBSDKCoreKit
-
+import PopupDialog
 class DrawingViewController: UIViewController {
     
 
@@ -25,10 +25,28 @@ class DrawingViewController: UIViewController {
 
     @IBAction func uploadImage(_ sender: AnyObject) {
         if let image = self.imageView.image {
-            API().postArtwork(name: nil, picture: image, owner: FBSDKAccessToken.current().userID, template: nil){
-                result in
-                print("Upload image: " + String(result))
+            let popup = PopupDialog(title: "Do you want to upload your artwork?", message: "Your drawing will be public for other people.", image: image)
+            let button1 = DefaultButton(title: "Upload") {
+                if FBSDKAccessToken.current() != nil{
+                    API().postArtwork(name: nil, picture: image, owner: FBSDKAccessToken.current().userID, template: nil){
+                        result in
+                        if result{
+                            let popupSuccess = PopupDialog(title: "Uploaded successfully!", message: nil)
+                            self.present(popupSuccess, animated: true, completion: nil)
+                        }
+                        else{
+                            let popupFailure = PopupDialog(title: "Some error happens... Try again later.", message: nil)
+                            self.present(popupFailure, animated: true, completion: nil)
+                        }
+                    }
+                }
+
             }
+            let button2 = CancelButton(title: "Cancel"){
+            }
+            popup.addButtons([button1, button2])
+            self.present(popup, animated: true, completion: nil)
+
         }
     }
     
@@ -63,22 +81,29 @@ class DrawingViewController: UIViewController {
     }
 
     @IBAction func clearImage(_ sender: UIButton) {
-        // save current image for undo
-        if imageList.count < 5 {
-            imageList.append(self.imageView.image)
-            undoList.removeAll()
+        let popup = PopupDialog(title: "Are you sure you want to clear the drawing?", message: nil)
+        let button1 = DefaultButton(title: "I am Sure") {
+            // save current image for undo
+            if self.imageList.count < 5 {
+                self.imageList.append(self.imageView.image)
+                self.undoList.removeAll()
+            }
+            else{
+                self.imageList.removeFirst();
+                self.imageList.append(self.imageView.image)
+                self.undoList.removeAll()
+            }
+            self.undoButton.isEnabled = true
+            self.redoButton.isEnabled = false
+            self.imageView.image = nil
+            self.imageView.layer.sublayers = nil
+            self.tempImageView.image = nil
+            self.tempImageView.layer.sublayers = nil
         }
-        else{
-            imageList.removeFirst();
-            imageList.append(self.imageView.image)
-            undoList.removeAll()
+        let button2 = CancelButton(title: "Cancel"){
         }
-        undoButton.isEnabled = true
-        redoButton.isEnabled = false
-        self.imageView.image = nil
-        self.imageView.layer.sublayers = nil
-        self.tempImageView.image = nil
-        self.tempImageView.layer.sublayers = nil
+        popup.addButtons([button1, button2])
+        self.present(popup, animated: true, completion: nil)
     }
     @IBAction func chooseTool(_ sender: UIButton) {
         self.tool = sender.tag
@@ -150,18 +175,6 @@ class DrawingViewController: UIViewController {
         blue = (0.0/255.0)
         redoButton.isEnabled = false
         undoButton.isEnabled = false
-        //////test//////
-//        let loginButton = FBSDKLoginButton()
-//        loginButton.center = view.center
-//        view.addSubview(loginButton)
-//        let api = API()
-//        api.getArtwork(pk: 5){
-//            atk in
-//            print("success")
-//            print(atk!.pk)
-//            print(atk!.comment)
-//            }
-        //////test end///////
 
         
         let colorSlider = ColorSlider()

@@ -16,6 +16,8 @@
 		070076DC1D9E675B0017D22C /* SwiftColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */; };
 		07008D3D1DB155D800D8210B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07008D3B1DB155D800D8210B /* Main.storyboard */; };
 		07008D3F1DB1568500D8210B /* PopupDialog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07008D3E1DB1568500D8210B /* PopupDialog.framework */; };
+		07008D401DB15A3A00D8210B /* PopupDialog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07008D3E1DB1568500D8210B /* PopupDialog.framework */; };
+		07008D411DB15A3A00D8210B /* PopupDialog.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07008D3E1DB1568500D8210B /* PopupDialog.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0705899A1DAC005E00AE4F8D /* Simplicity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070589991DAC005E00AE4F8D /* Simplicity.framework */; };
 		0705899B1DAC006B00AE4F8D /* Simplicity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070589991DAC005E00AE4F8D /* Simplicity.framework */; };
 		0705899C1DAC006B00AE4F8D /* Simplicity.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 070589991DAC005E00AE4F8D /* Simplicity.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -85,6 +87,7 @@
 				0767E8FD1DABB58A006691F4 /* FacebookCore.framework in Embed Frameworks */,
 				0705899C1DAC006B00AE4F8D /* Simplicity.framework in Embed Frameworks */,
 				07D69FCB1DAA70D200BBEA05 /* SwiftyJSON.framework in Embed Frameworks */,
+				07008D411DB15A3A00D8210B /* PopupDialog.framework in Embed Frameworks */,
 				0767E9031DABB58A006691F4 /* FBSDKCoreKit.framework in Embed Frameworks */,
 				0767E9071DABB58A006691F4 /* FBSDKShareKit.framework in Embed Frameworks */,
 				0767E8FF1DABB58A006691F4 /* FacebookLogin.framework in Embed Frameworks */,
@@ -143,6 +146,7 @@
 				07D69FDF1DABB44C00BBEA05 /* Bolts.framework in Frameworks */,
 				0705899B1DAC006B00AE4F8D /* Simplicity.framework in Frameworks */,
 				07D69FE41DABB44C00BBEA05 /* FBSDKLoginKit.framework in Frameworks */,
+				07008D401DB15A3A00D8210B /* PopupDialog.framework in Frameworks */,
 				0767E9001DABB58A006691F4 /* FacebookShare.framework in Frameworks */,
 				0767E8FA1DABB58A006691F4 /* Bolts.framework in Frameworks */,
 				07D69FCA1DAA70D200BBEA05 /* SwiftyJSON.framework in Frameworks */,
