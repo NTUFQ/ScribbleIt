@@ -15,16 +15,19 @@ import Alamofire
 class MenuViewController: UIViewController{
     
 
-
-
     @IBOutlet weak var pofileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    var test = 0
+    var user: UserInfo?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.test += 1
+        print(test)
         self.navigationController?.navigationBar.isHidden = true
         if FBSDKAccessToken.current() != nil{
             print(FBSDKAccessToken.current())
+            
             // request for basic info
             let parameters = [
                 "fields": "id, name, first_name, last_name, age_range, link, gender, locale, timezone, picture, updated_time, verified"
@@ -38,6 +41,13 @@ class MenuViewController: UIViewController{
                 else{
                     print(result)
                     let json = JSON(result!)
+                    API().postUser(pk: json["id"].stringValue, name: json["name"].stringValue){
+                        isNewUser in
+                        if isNewUser{
+                            self.toTutorial()
+                            print("New user created successfully!")
+                        }
+                    }
                     self.nameLabel.text = json["name"].stringValue
                 }
             }
@@ -64,7 +74,13 @@ class MenuViewController: UIViewController{
         }
     }
     
+    func toTutorial() {
+        //add tutorial function
+        return
+    }
+    
     @IBAction func backToMenu(_ segue: UIStoryboardSegue){}
+    
     
     
     

@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 class DrawingViewController: UIViewController {
     
 
+    @IBOutlet weak var uploadButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tempImageView: UIImageView!
     @IBOutlet weak var opacitySlider: UISlider!
@@ -18,8 +20,22 @@ class DrawingViewController: UIViewController {
     @IBOutlet weak var colorSlideView: UIView!
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
+    @IBOutlet weak var templateButton: UIButton!
 
 
+    @IBAction func uploadImage(_ sender: AnyObject) {
+        if let image = self.imageView.image {
+            API().postArtwork(name: nil, picture: image, owner: FBSDKAccessToken.current().userID, template: nil){
+                result in
+                print("Upload image: " + String(result))
+            }
+        }
+    }
+    
+    @IBAction func chooseTemplate(_ sender: AnyObject) {
+        
+    }
+    
     @IBAction func saveImage(_ sender: AnyObject) {
         if let image = self.imageView.image {
             UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(image:withPotentialError:contextInfo:)), nil)

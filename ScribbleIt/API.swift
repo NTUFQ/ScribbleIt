@@ -25,23 +25,40 @@ class Like{
         self.owner_name = owner_name
         self.time = time
     }
+    
+    init(json: JSON) {
+        self.pk = json["id"].intValue
+        self.artwork = json["artwork"].string
+        self.owner_id = json["owner", "fbid"].stringValue
+        self.owner_name = json["owner", "name"].stringValue
+        self.time = json["created_by"].stringValue
+    }
 }
 
 class Comment{
     let pk: Int
-    var text: String?
+    var text: String
     var artwork: String?
-    var owner_id: String?
+    var owner_id: String
     var owner_name: String?
     var time: String?
     
-    init(pk: Int, text: String?, artwork: String?, owner_id: String?, owner_name: String?, time: String?) {
+    init(pk: Int, text: String, artwork: String?, owner_id: String, owner_name: String?, time: String?) {
         self.pk = pk
         self.text = text
         self.artwork = artwork
         self.owner_id = owner_id
         self.owner_name = owner_name
         self.time = time
+    }
+    
+    init(json: JSON) {
+        self.pk = json["id"].intValue
+        self.text = json["text"].stringValue
+        self.artwork = json["artwork"].string
+        self.owner_id = json["owner", "fbid"].stringValue
+        self.owner_name = json["owner", "name"].stringValue
+        self.time = json["created_by"].stringValue
     }
 }
 
@@ -67,6 +84,23 @@ class Artwork{
         self.template_id = template_id
         self.template_name = template_name
     }
+    
+    init(json: JSON) {
+        self.pk = json["id"].intValue
+        self.owner_id = json["owner", "fbid"].stringValue
+        self.owner_name = json["owner", "name"].stringValue
+        self.url = json["picture"].string
+        self.comment = [Comment]()
+        for (_, commentJson) in json["comments"]{
+            self.comment?.append(Comment(json: commentJson))
+        }
+        self.like = [Like]()
+        for (_, likeJson) in json["likes"]{
+            self.like?.append(Like(json: likeJson))
+        }
+        self.template_id = json["template", "id"].int
+        self.template_name = json["template", "name"].string
+    }
 }
 
 class UserInfo{
@@ -78,9 +112,20 @@ class UserInfo{
     
     init(pk: String, name: String?, email: String?, picture: UIImage?, artwork: [Artwork]?) {
         self.pk = pk
+        self.name = name
         self.email = email
         self.picture = picture
         self.artwork = artwork
+    }
+    
+    init(json: JSON) {
+        self.pk = json["fbid"].stringValue
+        self.name = json["name"].string
+        self.email = json["email"].string
+        self.artwork = [Artwork]()
+        for (_, artworkJson) in json["artwork_list"]{
+            self.artwork?.append(Artwork(json: artworkJson))
+        }
     }
 }
 
@@ -98,42 +143,12 @@ class API{
     //      }
     
     func getArtwork(pk: Int, completeHandler: @escaping (_ artwork: Artwork?) -> ()){
-        var artwork: Artwork?
         Alamofire.request(URL + "/api/artwork/" + String(pk)).validate().responseJSON{
             response in
             switch response.result {
             case .success:
                 let json = JSON(data: response.data!)
-                let name = json["name"].string
-                let url = json["picture"].string
-                let owner_id = json["owner", "fbid"].string
-                let owner_name = json["owner", "name"].string
-                var comment: [Comment]?
-                var like: [Like]?
-                let template_id = json["template","id"].int
-                let template_name = json["template", "id"].string
-                for (_, commentJson):(String, JSON) in json["comments"]{
-                    let commentId = commentJson["id"].intValue
-                    let commentText = commentJson["text"].string
-                    let commentTime = commentJson["created_by"].string
-                    let commentOwnerId = commentJson["owner", "fbid"].string
-                    let commentOwnerName = commentJson["owner", "name"].string
-                    let newComment = Comment(pk: commentId, text: commentText, artwork: nil, owner_id: commentOwnerId, owner_name: commentOwnerName, time: commentTime)
-                    comment?.append(newComment)
-                }
-                for (_, likeJson):(String, JSON) in json["likes"]{
-                    let likeId = likeJson["id"].intValue
-                    let likeTime = likeJson["created_by"].string
-                    let likeOwnerId = likeJson["owner", "fbid"].string
-                    let likeOwnerName = likeJson["owner", "name"].string
-                    let newLike = Like(pk: likeId, artwork: nil, owner_id: likeOwnerId, owner_name: likeOwnerName, time: likeTime)
-                    like?.append(newLike)
-                }
-                artwork = Artwork(pk: pk, name: name, url: url, owner_id: owner_id, owner_name: owner_name, comment: comment, like: like, template_id: template_id, template_name: template_name)
-                
-                print(json)
-                print(artwork!)
-                print(artwork == nil)
+                let artwork = Artwork(json: json)
                 completeHandler(artwork)
             case .failure(let error):
                 print(error)
@@ -143,52 +158,39 @@ class API{
     }
     
     func getUser(pk: String, completeHandler: @escaping (_ user: UserInfo?) -> ()){
-        var userInfo: UserInfo?
         Alamofire.request(URL + "/api/user/" + pk).validate().responseJSON{
             response in
             switch response.result {
             case .success:
                 let json = JSON(data: response.data!)
-                let name = json["name"].string
-                let email = json["email"].string
-                var artwork: [Artwork]?
-                for (_, artworkJson):(String, JSON) in json["artwork_list"]{
-                    let artworkId = artworkJson["id"].intValue
-                    let name = artworkJson["name"].string
-                    let url = artworkJson["picture"].string
-                    let owner_id = artworkJson["owner", "fbid"].string
-                    let owner_name = artworkJson["owner", "name"].string
-                    var comment: [Comment]?
-                    var like: [Like]?
-                    let template_id = artworkJson["template","id"].int
-                    let template_name = artworkJson["template", "id"].string
-                    for (_, commentJson):(String, JSON) in json["comments"]{
-                        let commentId = commentJson["id"].intValue
-                        let commentText = commentJson["text"].string
-                        let commentTime = commentJson["created_by"].string
-                        let commentOwnerId = commentJson["owner", "fbid"].string
-                        let commentOwnerName = commentJson["owner", "name"].string
-                        let newComment = Comment(pk: commentId, text: commentText, artwork: nil, owner_id: commentOwnerId, owner_name: commentOwnerName, time: commentTime)
-                        comment?.append(newComment)
-                    }
-                    for (_, likeJson):(String, JSON) in json["likes"]{
-                        let likeId = likeJson["id"].intValue
-                        let likeTime = likeJson["created_by"].string
-                        let likeOwnerId = likeJson["owner", "fbid"].string
-                        let likeOwnerName = likeJson["owner", "name"].string
-                        let newLike = Like(pk: likeId, artwork: nil, owner_id: likeOwnerId, owner_name: likeOwnerName, time: likeTime)
-                        like?.append(newLike)
-                    }
-                    artwork?.append(Artwork(pk: artworkId, name: name, url: url, owner_id: owner_id, owner_name: owner_name, comment: comment, like: like, template_id: template_id, template_name: template_name))
-                }
-                userInfo = UserInfo(pk: pk, name: name, email: email, picture: nil, artwork: artwork)
-                print(json)
-                print(userInfo!)
-                print(userInfo == nil)
+                let userInfo = UserInfo(json: json)
                 completeHandler(userInfo)
             case .failure(let error):
                 print(error)
                 completeHandler(nil)
+            }
+        }
+    }
+    
+    // this function is for creating new user
+    // callback function can be used to toogle tutorial
+    // tested in 2016-10-14 23:49:32
+    func postUser(pk: String, name: String, completeHandler: @escaping (_ isNewUser: Bool)->()){
+        let parameter = [
+            "fbid": pk,
+            "name": name,
+            ]
+        Alamofire.request(URL+"/api/newuser/", method: .post, parameters: parameter).validate().responseJSON{
+            response in
+            print(JSON(response.data))
+            print(response.result)
+            switch response.result {
+            case .success:
+                // if the user is new user
+                completeHandler(true)
+            case .failure:
+                // if the user is old user
+                completeHandler(false)
             }
         }
     }
@@ -200,7 +202,7 @@ class API{
             "artwork": artworkId
         ] as [String : Any]
         
-        Alamofire.request(URL+"/api/comment", method: .post, parameters: parameter).validate().responseJSON{
+        Alamofire.request(URL+"/api/comment/", method: .post, parameters: parameter).validate().responseJSON{
             response in
             switch response.result {
             case .success:
@@ -217,7 +219,7 @@ class API{
             "artwork": artworkId
             ] as [String : Any]
         
-        Alamofire.request(URL+"/api/like", method: .post, parameters: parameter).validate().responseJSON{
+        Alamofire.request(URL+"/api/like/", method: .post, parameters: parameter).validate().responseJSON{
             response in
             switch response.result {
             case .success:
@@ -228,9 +230,9 @@ class API{
         }
     }
     
+    
     func postArtwork(name: String?, picture: UIImage?, owner: String?, template: Int?, completeHandler: @escaping (_ result: Bool) -> ()) {
         var parameter = [
-            "name": name!,
             "owner": owner!
         ]
         if (template != nil) {
@@ -248,7 +250,7 @@ class API{
             for (key, value) in parameter {
                 MultipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
             }
-            }, usingThreshold: UInt64.init(), to: URL + "/api/artwork", method: .post, headers: nil, encodingCompletion: {
+            }, usingThreshold: UInt64.init(), to: URL + "/api/artwork/", method: .post, headers: nil, encodingCompletion: {
                 encodingResult in
                 
                 switch encodingResult {

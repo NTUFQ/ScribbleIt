@@ -23,7 +23,7 @@ class LoginViewController: UIViewController{
         }
     }
     @IBAction func clickPlayAsGuest(_ sender: AnyObject) {
-        self.performSegue(withIdentifier: "LoginToMenu", sender: self)
+        self.toMenu()
     }
     
     @IBAction func clickLogOut(_ segue: UIStoryboardSegue){}
@@ -48,18 +48,6 @@ class LoginViewController: UIViewController{
     func toMenu() {
         self.performSegue(withIdentifier: "LoginToMenu", sender: self)
     }
-//        Simplicity.login(Facebook()){
-//            (accessToken, error) in
-//            if error != nil {
-//                print(error)
-//                return
-//            }
-//            if accessToken != nil {
-//                print(accessToken)
-//                
-//                return
-//            }
-//        }
 
 }
     

@@ -49,6 +49,10 @@
 		07D69FE31DABB44C00BBEA05 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FDC1DABB44C00BBEA05 /* FBSDKCoreKit.framework */; };
 		07D69FE41DABB44C00BBEA05 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FDD1DABB44C00BBEA05 /* FBSDKLoginKit.framework */; };
 		07D69FE51DABB44C00BBEA05 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FDE1DABB44C00BBEA05 /* FBSDKShareKit.framework */; };
+		07E207021DB10CE3005FA4E8 /* ArtworkGalleryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E207011DB10CE3005FA4E8 /* ArtworkGalleryCellTableViewCell.swift */; };
+		07E207041DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E207031DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift */; };
+		07E207061DB1266A005FA4E8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E207051DB1266A005FA4E8 /* TestViewController.swift */; };
+		07E207081DB13DCE005FA4E8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E207071DB13DCE005FA4E8 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +125,10 @@
 		07D69FDC1DABB44C00BBEA05 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Carthage/Build/iOS/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		07D69FDD1DABB44C00BBEA05 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Carthage/Build/iOS/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		07D69FDE1DABB44C00BBEA05 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Carthage/Build/iOS/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		07E207011DB10CE3005FA4E8 /* ArtworkGalleryCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkGalleryCellTableViewCell.swift; sourceTree = "<group>"; };
+		07E207031DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtworkGalleryViewController.swift; path = ../ArtworkGalleryViewController.swift; sourceTree = "<group>"; };
+		07E207051DB1266A005FA4E8 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		07E207071DB13DCE005FA4E8 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +200,7 @@
 		070076AC1D9E36C80017D22C /* ScribbleIt */ = {
 			isa = PBXGroup;
 			children = (
+				07E207031DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift */,
 				070589981DABEAD800AE4F8D /* ScribbleIt.entitlements */,
 				070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */,
 				070076AD1D9E36C80017D22C /* AppDelegate.swift */,
@@ -204,6 +213,9 @@
 				070076B61D9E36C80017D22C /* LaunchScreen.storyboard */,
 				070076B91D9E36C80017D22C /* Info.plist */,
 				074F979B1DAC105C0081BA56 /* MenuViewController.swift */,
+				07E207011DB10CE3005FA4E8 /* ArtworkGalleryCellTableViewCell.swift */,
+				07E207051DB1266A005FA4E8 /* TestViewController.swift */,
+				07E207071DB13DCE005FA4E8 /* CardView.swift */,
 			);
 			path = ScribbleIt;
 			sourceTree = "<group>";
@@ -384,12 +396,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E207061DB1266A005FA4E8 /* TestViewController.swift in Sources */,
 				07D69FD71DAAA27300BBEA05 /* LoginViewController.swift in Sources */,
 				070076DC1D9E675B0017D22C /* SwiftColorPickerViewController.swift in Sources */,
+				07E207041DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift in Sources */,
 				070076B01D9E36C80017D22C /* ViewController.swift in Sources */,
 				074F979C1DAC105C0081BA56 /* MenuViewController.swift in Sources */,
 				07736AED1DAA005B002BA895 /* ColorSlider.swift in Sources */,
+				07E207021DB10CE3005FA4E8 /* ArtworkGalleryCellTableViewCell.swift in Sources */,
 				070076AE1D9E36C80017D22C /* AppDelegate.swift in Sources */,
+				07E207081DB13DCE005FA4E8 /* CardView.swift in Sources */,
 				07D69FBB1DAA4BE800BBEA05 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,7 +567,7 @@
 					"$(PROJECT_DIR)/Document/FacebookSDK",
 				);
 				INFOPLIST_FILE = ScribbleIt/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FQ.ScribbleIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -572,7 +588,7 @@
 					"$(PROJECT_DIR)/Document/FacebookSDK",
 				);
 				INFOPLIST_FILE = ScribbleIt/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FQ.ScribbleIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
