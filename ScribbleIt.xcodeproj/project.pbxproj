@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		070076AE1D9E36C80017D22C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070076AD1D9E36C80017D22C /* AppDelegate.swift */; };
 		070076B01D9E36C80017D22C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070076AF1D9E36C80017D22C /* ViewController.swift */; };
-		070076B31D9E36C80017D22C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070076B11D9E36C80017D22C /* Main.storyboard */; };
 		070076B51D9E36C80017D22C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 070076B41D9E36C80017D22C /* Assets.xcassets */; };
 		070076B81D9E36C80017D22C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070076B61D9E36C80017D22C /* LaunchScreen.storyboard */; };
 		070076C31D9E36C80017D22C /* ScribbleItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070076C21D9E36C80017D22C /* ScribbleItTests.swift */; };
 		070076CE1D9E36C80017D22C /* ScribbleItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070076CD1D9E36C80017D22C /* ScribbleItUITests.swift */; };
 		070076DC1D9E675B0017D22C /* SwiftColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */; };
+		07008D3D1DB155D800D8210B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07008D3B1DB155D800D8210B /* Main.storyboard */; };
+		07008D3F1DB1568500D8210B /* PopupDialog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07008D3E1DB1568500D8210B /* PopupDialog.framework */; };
 		0705899A1DAC005E00AE4F8D /* Simplicity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070589991DAC005E00AE4F8D /* Simplicity.framework */; };
 		0705899B1DAC006B00AE4F8D /* Simplicity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070589991DAC005E00AE4F8D /* Simplicity.framework */; };
 		0705899C1DAC006B00AE4F8D /* Simplicity.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 070589991DAC005E00AE4F8D /* Simplicity.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -99,7 +100,6 @@
 		070076AA1D9E36C80017D22C /* ScribbleIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScribbleIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		070076AD1D9E36C80017D22C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		070076AF1D9E36C80017D22C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		070076B21D9E36C80017D22C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		070076B41D9E36C80017D22C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		070076B71D9E36C80017D22C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		070076B91D9E36C80017D22C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,6 +110,8 @@
 		070076CD1D9E36C80017D22C /* ScribbleItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScribbleItUITests.swift; sourceTree = "<group>"; };
 		070076CF1D9E36C80017D22C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColorPickerViewController.swift; sourceTree = "<group>"; };
+		07008D3C1DB155D800D8210B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07008D3E1DB1568500D8210B /* PopupDialog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PopupDialog.framework; path = Carthage/Build/iOS/PopupDialog.framework; sourceTree = "<group>"; };
 		070589981DABEAD800AE4F8D /* ScribbleIt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScribbleIt.entitlements; sourceTree = "<group>"; };
 		070589991DAC005E00AE4F8D /* Simplicity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Simplicity.framework; path = Carthage/Build/iOS/Simplicity.framework; sourceTree = "<group>"; };
 		074F979B1DAC105C0081BA56 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				0767E9021DABB58A006691F4 /* FBSDKCoreKit.framework in Frameworks */,
 				07D69FE31DABB44C00BBEA05 /* FBSDKCoreKit.framework in Frameworks */,
 				0705899A1DAC005E00AE4F8D /* Simplicity.framework in Frameworks */,
+				07008D3F1DB1568500D8210B /* PopupDialog.framework in Frameworks */,
 				07D69FC91DAA70C900BBEA05 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,6 +203,7 @@
 		070076AC1D9E36C80017D22C /* ScribbleIt */ = {
 			isa = PBXGroup;
 			children = (
+				07008D3B1DB155D800D8210B /* Main.storyboard */,
 				07E207031DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift */,
 				070589981DABEAD800AE4F8D /* ScribbleIt.entitlements */,
 				070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */,
@@ -207,7 +211,6 @@
 				070076AF1D9E36C80017D22C /* ViewController.swift */,
 				07D69FD61DAAA27300BBEA05 /* LoginViewController.swift */,
 				07D69FBA1DAA4BE800BBEA05 /* API.swift */,
-				070076B11D9E36C80017D22C /* Main.storyboard */,
 				07736AEC1DAA005B002BA895 /* ColorSlider.swift */,
 				070076B41D9E36C80017D22C /* Assets.xcassets */,
 				070076B61D9E36C80017D22C /* LaunchScreen.storyboard */,
@@ -241,6 +244,7 @@
 		07D69FCD1DAA9A2500BBEA05 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				07008D3E1DB1568500D8210B /* PopupDialog.framework */,
 				070589991DAC005E00AE4F8D /* Simplicity.framework */,
 				07D69FC81DAA70C900BBEA05 /* SwiftyJSON.framework */,
 				07D69FC31DAA6E7200BBEA05 /* Alamofire.framework */,
@@ -369,9 +373,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07008D3D1DB155D800D8210B /* Main.storyboard in Resources */,
 				070076B81D9E36C80017D22C /* LaunchScreen.storyboard in Resources */,
 				070076B51D9E36C80017D22C /* Assets.xcassets in Resources */,
-				070076B31D9E36C80017D22C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,20 +446,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		070076B11D9E36C80017D22C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				070076B21D9E36C80017D22C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		070076B61D9E36C80017D22C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				070076B71D9E36C80017D22C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		07008D3B1DB155D800D8210B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07008D3C1DB155D800D8210B /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

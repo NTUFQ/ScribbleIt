@@ -35,7 +35,7 @@ import CoreGraphics
 	public var color: UIColor {
 		return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1)
 	}
-	
+
 	// MARK: Customization
 	/// The display orientation of the `ColorSlider`.
 	public enum Orientation {
@@ -51,8 +51,8 @@ import CoreGraphics
 		didSet {
 			switch orientation {
 			case .vertical:
-				drawLayer.startPoint = CGPoint(x: 0.5, y: 1)
-				drawLayer.endPoint = CGPoint(x: 0.5, y: 0)
+				drawLayer.startPoint = CGPoint(x: 0.5, y: 0.5)
+				drawLayer.endPoint = CGPoint(x: 1, y: 0)
 			case .horizontal:
 				drawLayer.startPoint = CGPoint(x: 0, y: 0.5)
 				drawLayer.endPoint = CGPoint(x: 1, y: 0.5)
