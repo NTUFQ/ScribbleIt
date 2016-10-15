@@ -12,18 +12,27 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import SwiftyJSON
 import Alamofire
-class MenuViewController: UIViewController{
+
+protocol RestoreStateDelegate {
+    func restoreState(current: UIImage?, stack: [UIImage?])
+}
+
+class MenuViewController: UIViewController, StoreStateDelegate{
     
 
     @IBOutlet weak var pofileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var continueDrawingButton: UIButton!
     var test = 0
     var user: UserInfo?
+    var storedImage: UIImage?
+    var storedStack: [UIImage?] = []
+    var storedUndoStack: [UIImage?] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.test += 1
-        print(test)
+        self.continueDrawingButton.isEnabled = false
         self.navigationController?.navigationBar.isHidden = true
         if FBSDKAccessToken.current() != nil{
             print(FBSDKAccessToken.current())
@@ -81,8 +90,30 @@ class MenuViewController: UIViewController{
     
     @IBAction func backToMenu(_ segue: UIStoryboardSegue){}
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let id = segue.identifier{
+            switch id{
+            case "MenuToDrawing":
+                let drawingViewController: DrawingViewController = segue.destination as! DrawingViewController
+                drawingViewController.delegate = self
+                break
+            case "MenuToContinueDrawing":
+                let continueDrawingViewController: DrawingViewController = segue.destination as! DrawingViewController
+                continueDrawingViewController.current = self.storedImage
+                continueDrawingViewController.imageList = self.storedStack
+            default:
+                break
+            }
+        }
+
+    }
     
-    
+    func storeState(current: UIImage?, stack: [UIImage?], undoStack: [UIImage?]) {
+        self.storedImage = current
+        self.storedStack = stack
+        self.storedUndoStack = undoStack
+        self.continueDrawingButton.isEnabled = true
+    }
     
 }
 

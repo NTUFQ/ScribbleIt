@@ -9,9 +9,16 @@
 import UIKit
 import FBSDKCoreKit
 import PopupDialog
+
+protocol StoreStateDelegate {
+    func storeState(current: UIImage?, stack: [UIImage?], undoStack: [UIImage?])
+}
+
 class DrawingViewController: UIViewController {
     
-
+    
+    var delegate: StoreStateDelegate? = nil
+    
     @IBOutlet weak var uploadButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tempImageView: UIImageView!
@@ -21,6 +28,7 @@ class DrawingViewController: UIViewController {
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
     @IBOutlet weak var templateButton: UIButton!
+    @IBOutlet weak var colorBox: UIView!
 
 
     @IBAction func uploadImage(_ sender: AnyObject) {
@@ -133,11 +141,50 @@ class DrawingViewController: UIViewController {
     
     var lastPoint:CGPoint!
     var isSwiping:Bool!
-    var red:CGFloat = (0.0/255.0)
-    var green:CGFloat = (0.0/255.0)
-    var blue:CGFloat = (0.0/255.0)
+    
+    // define color
+    var _red:CGFloat = 0.0
+    var red: CGFloat{
+        get{
+            return self._red
+        }
+        set{
+            self._red = newValue
+            self.updateColor()
+        }
+    }
+    var _green:CGFloat = 0.0
+    var green: CGFloat{
+        get{
+            return self._green
+        }
+        set{
+            self._green = newValue
+            self.updateColor()
+        }
+    }
+    var _blue:CGFloat = 0.0
+    var blue: CGFloat{
+        get{
+            return self._blue
+        }
+        set{
+            self._blue = newValue
+            self.updateColor()
+        }
+    }
+    
     var lineWidth:CGFloat = 9.0
-    var opacity:CGFloat = 1.0
+    var _opacity: CGFloat = 1.0
+    var opacity: CGFloat{
+        get{
+            return self._opacity
+        }
+        set{
+            self._opacity = newValue
+            self.updateColor()
+        }
+    }
     var tool: Int = 0
     var keyboardHeight = 450
     let fixColors : [(CGFloat, CGFloat, CGFloat)] = [
@@ -153,8 +200,10 @@ class DrawingViewController: UIViewController {
         (1.0, 1.0, 0),
         (1.0, 1.0, 1.0),
         ]
-    var imageList = [UIImage?]()
-    var undoList = [UIImage?]()
+    
+    var current: UIImage? = nil
+    var imageList: [UIImage?] = []
+    var undoList: [UIImage?] = []
     
     
     func image(image: UIImage, withPotentialError error: NSErrorPointer, contextInfo: UnsafeRawPointer) {
@@ -169,20 +218,28 @@ class DrawingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
+        
         // Do any additional setup after loading the view, typically from a nib.
         red = (0.0/255.0)
         green = (0.0/255.0)
         blue = (0.0/255.0)
-        redoButton.isEnabled = false
-        undoButton.isEnabled = false
-
         
+        // restore drawing
+        print(redoButton.isEnabled)
+        if imageList.isEmpty {
+            undoButton.isEnabled = false
+        }
+        if undoList.isEmpty{
+            redoButton.isEnabled = false
+        }
+        
+        
+        // initial color-slider
         let colorSlider = ColorSlider()
         colorSlider.frame = CGRect(x: 0, y: 0, width: 50, height: 200)
         colorSlideView.addSubview(colorSlider)
         colorSlider.addTarget(self, action: #selector(changedColor(slider:)), for: .valueChanged)
         colorSlider.previewEnabled = true
-        //colorSlider.orientation = .horizontal
         colorSlider.borderWidth = 2.0
         colorSlider.borderColor = UIColor.white
     }
@@ -388,5 +445,15 @@ class DrawingViewController: UIViewController {
         return bez
     }
     // end of drawing star
+    
+    func updateColor(){
+        self.colorBox.backgroundColor = UIColor(red: self._red, green: self._green, blue: self._blue, alpha: self._opacity)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (self.delegate != nil){
+            self.delegate!.storeState(current: self.imageView.image, stack: imageList, undoStack: undoList)
+        }
+    }
 }
 

@@ -133,10 +133,6 @@
                                             <action selector="changeBrashWidth:" destination="BYZ-38-t0r" eventType="valueChanged" id="UZH-1K-QVH"/>
                                         </connections>
                                     </slider>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jvL-KS-ypa">
-                                        <frame key="frameInset" minX="48" minY="72" width="73" height="66"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tqb-qy-Nkf">
                                         <frame key="frameInset" minX="175" minY="19" width="140" height="163"/>
                                         <subviews>
@@ -221,18 +217,19 @@
                                             <action selector="chooseTool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CiY-jI-TDO"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jvL-KS-ypa">
+                                        <frame key="frameInset" width="73" height="66"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="jvL-KS-ypa" firstAttribute="leading" secondItem="JYT-CS-iWf" secondAttribute="leading" constant="10" id="9kl-Jg-L3D"/>
-                                    <constraint firstItem="Tqb-qy-Nkf" firstAttribute="leading" secondItem="jvL-KS-ypa" secondAttribute="trailing" constant="30" id="dou-QI-pKg"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jen-zj-TxZ" secondAttribute="bottom" constant="200" id="7sU-3d-TUB"/>
                             <constraint firstItem="JYT-CS-iWf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="86d-8N-aQ1"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tqb-qy-Nkf" secondAttribute="bottom" constant="-10" id="Acr-EG-Kko"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tqb-qy-Nkf" secondAttribute="bottom" id="Acr-EG-Kko"/>
                             <constraint firstItem="jen-zj-TxZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="JJh-iZ-Lg5"/>
                             <constraint firstItem="JYT-CS-iWf" firstAttribute="top" secondItem="23D-KC-i8k" secondAttribute="bottom" constant="10" id="LMk-QN-lox"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jen-zj-TxZ" secondAttribute="trailing" constant="40" id="PDG-rV-6Lh"/>
@@ -243,6 +240,7 @@
                     </view>
                     <connections>
                         <outlet property="brashWidthSlider" destination="Key-gG-aZq" id="x1F-56-qt7"/>
+                        <outlet property="colorBox" destination="jvL-KS-ypa" id="zEm-0r-AXh"/>
                         <outlet property="colorSlideView" destination="vQg-fF-Bkm" id="C41-JO-3LQ"/>
                         <outlet property="imageView" destination="23D-KC-i8k" id="z00-qI-ff7"/>
                         <outlet property="opacitySlider" destination="dgA-ts-gu5" id="D0d-wZ-J8V"/>
@@ -360,7 +358,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Draw"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="ueK-E2-x2N"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="MenuToDrawing" id="ueK-E2-x2N"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oe2-II-loz">
@@ -383,10 +381,20 @@
                                     <segue destination="1Ol-bP-MVd" kind="show" id="m8i-nY-Aug"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pct-dt-Kzh">
+                                <frame key="frameInset" minX="233" minY="525" width="242" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Continue drawing"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="MenuToContinueDrawing" id="XBp-YV-knj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="continueDrawingButton" destination="pct-dt-Kzh" id="voO-7q-iCF"/>
                         <outlet property="nameLabel" destination="NSn-jz-ZC9" id="e3s-lf-fMD"/>
                         <outlet property="pofileImage" destination="oe2-II-loz" id="JMC-GP-3u9"/>
                     </connections>
@@ -505,4 +513,7 @@
         <image name="pencil_blue" width="102" height="411"/>
         <image name="pencil_red" width="102" height="411"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="XBp-YV-knj"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -18,8 +18,9 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadArtworks(ownerId: FBSDKAccessToken.current().userID)
-
+        if FBSDKAccessToken.current() != nil{
+            loadArtworks(ownerId: FBSDKAccessToken.current().userID)
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
