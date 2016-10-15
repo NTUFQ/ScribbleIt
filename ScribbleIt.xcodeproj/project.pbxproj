@@ -21,6 +21,8 @@
 		0705899A1DAC005E00AE4F8D /* Simplicity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070589991DAC005E00AE4F8D /* Simplicity.framework */; };
 		0705899B1DAC006B00AE4F8D /* Simplicity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070589991DAC005E00AE4F8D /* Simplicity.framework */; };
 		0705899C1DAC006B00AE4F8D /* Simplicity.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 070589991DAC005E00AE4F8D /* Simplicity.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		074543191DB235A800B397AA /* TemplateCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074543181DB235A800B397AA /* TemplateCollectionViewController.swift */; };
+		0745431D1DB239F200B397AA /* TemplateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0745431C1DB239F200B397AA /* TemplateCollectionViewCell.swift */; };
 		074F979C1DAC105C0081BA56 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074F979B1DAC105C0081BA56 /* MenuViewController.swift */; };
 		0767E8FA1DABB58A006691F4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FD81DABB44B00BBEA05 /* Bolts.framework */; };
 		0767E8FB1DABB58A006691F4 /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FD81DABB44B00BBEA05 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -117,6 +119,8 @@
 		07008D3E1DB1568500D8210B /* PopupDialog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PopupDialog.framework; path = Carthage/Build/iOS/PopupDialog.framework; sourceTree = "<group>"; };
 		070589981DABEAD800AE4F8D /* ScribbleIt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScribbleIt.entitlements; sourceTree = "<group>"; };
 		070589991DAC005E00AE4F8D /* Simplicity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Simplicity.framework; path = Carthage/Build/iOS/Simplicity.framework; sourceTree = "<group>"; };
+		074543181DB235A800B397AA /* TemplateCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateCollectionViewController.swift; sourceTree = "<group>"; };
+		0745431C1DB239F200B397AA /* TemplateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateCollectionViewCell.swift; sourceTree = "<group>"; };
 		074F979B1DAC105C0081BA56 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		07736AEC1DAA005B002BA895 /* ColorSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSlider.swift; sourceTree = "<group>"; };
 		07D69FBA1DAA4BE800BBEA05 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -207,22 +211,14 @@
 		070076AC1D9E36C80017D22C /* ScribbleIt */ = {
 			isa = PBXGroup;
 			children = (
+				0745431B1DB235DC00B397AA /* Resources */,
+				0745431A1DB235B200B397AA /* ViewControllers */,
 				07008D3B1DB155D800D8210B /* Main.storyboard */,
-				07E207031DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift */,
 				070589981DABEAD800AE4F8D /* ScribbleIt.entitlements */,
-				070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */,
 				070076AD1D9E36C80017D22C /* AppDelegate.swift */,
-				070076AF1D9E36C80017D22C /* ViewController.swift */,
-				07D69FD61DAAA27300BBEA05 /* LoginViewController.swift */,
-				07D69FBA1DAA4BE800BBEA05 /* API.swift */,
-				07736AEC1DAA005B002BA895 /* ColorSlider.swift */,
 				070076B41D9E36C80017D22C /* Assets.xcassets */,
 				070076B61D9E36C80017D22C /* LaunchScreen.storyboard */,
 				070076B91D9E36C80017D22C /* Info.plist */,
-				074F979B1DAC105C0081BA56 /* MenuViewController.swift */,
-				07E207011DB10CE3005FA4E8 /* ArtworkGalleryCellTableViewCell.swift */,
-				07E207051DB1266A005FA4E8 /* TestViewController.swift */,
-				07E207071DB13DCE005FA4E8 /* CardView.swift */,
 			);
 			path = ScribbleIt;
 			sourceTree = "<group>";
@@ -243,6 +239,32 @@
 				070076CF1D9E36C80017D22C /* Info.plist */,
 			);
 			path = ScribbleItUITests;
+			sourceTree = "<group>";
+		};
+		0745431A1DB235B200B397AA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				07D69FD61DAAA27300BBEA05 /* LoginViewController.swift */,
+				074F979B1DAC105C0081BA56 /* MenuViewController.swift */,
+				070076AF1D9E36C80017D22C /* ViewController.swift */,
+				07E207031DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift */,
+				07E207011DB10CE3005FA4E8 /* ArtworkGalleryCellTableViewCell.swift */,
+				074543181DB235A800B397AA /* TemplateCollectionViewController.swift */,
+				07E207051DB1266A005FA4E8 /* TestViewController.swift */,
+				0745431C1DB239F200B397AA /* TemplateCollectionViewCell.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0745431B1DB235DC00B397AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				07E207071DB13DCE005FA4E8 /* CardView.swift */,
+				07736AEC1DAA005B002BA895 /* ColorSlider.swift */,
+				070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */,
+				07D69FBA1DAA4BE800BBEA05 /* API.swift */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		07D69FCD1DAA9A2500BBEA05 /* Framework */ = {
@@ -408,10 +430,12 @@
 				07D69FD71DAAA27300BBEA05 /* LoginViewController.swift in Sources */,
 				070076DC1D9E675B0017D22C /* SwiftColorPickerViewController.swift in Sources */,
 				07E207041DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift in Sources */,
+				0745431D1DB239F200B397AA /* TemplateCollectionViewCell.swift in Sources */,
 				070076B01D9E36C80017D22C /* ViewController.swift in Sources */,
 				074F979C1DAC105C0081BA56 /* MenuViewController.swift in Sources */,
 				07736AED1DAA005B002BA895 /* ColorSlider.swift in Sources */,
 				07E207021DB10CE3005FA4E8 /* ArtworkGalleryCellTableViewCell.swift in Sources */,
+				074543191DB235A800B397AA /* TemplateCollectionViewController.swift in Sources */,
 				070076AE1D9E36C80017D22C /* AppDelegate.swift in Sources */,
 				07E207081DB13DCE005FA4E8 /* CardView.swift in Sources */,
 				07D69FBB1DAA4BE800BBEA05 /* API.swift in Sources */,

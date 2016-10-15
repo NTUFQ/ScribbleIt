@@ -33,11 +33,6 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
             (user: UserInfo?) in
             if user != nil {
                 self.artworks = user!.artwork
-                print(user!.pk)
-                print("888888")
-                print(self.artworks)
-                print(self.artworks?[0].owner_name)
-                print(user!.name)
                 self.artworkTableView.reloadData()
             }
 

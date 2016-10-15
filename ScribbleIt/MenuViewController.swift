@@ -23,11 +23,11 @@ class MenuViewController: UIViewController, StoreStateDelegate{
     @IBOutlet weak var pofileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var continueDrawingButton: UIButton!
-    var test = 0
     var user: UserInfo?
     var storedImage: UIImage?
     var storedStack: [UIImage?] = []
     var storedUndoStack: [UIImage?] = []
+    var storedTemplate: Template?
     
     
     override func viewDidLoad() {
@@ -101,6 +101,7 @@ class MenuViewController: UIViewController, StoreStateDelegate{
                 let continueDrawingViewController: DrawingViewController = segue.destination as! DrawingViewController
                 continueDrawingViewController.current = self.storedImage
                 continueDrawingViewController.imageList = self.storedStack
+                continueDrawingViewController.template = self.storedTemplate
             default:
                 break
             }
@@ -108,10 +109,11 @@ class MenuViewController: UIViewController, StoreStateDelegate{
 
     }
     
-    func storeState(current: UIImage?, stack: [UIImage?], undoStack: [UIImage?]) {
+    func storeState(current: UIImage?, stack: [UIImage?], undoStack: [UIImage?], template: Template?) {
         self.storedImage = current
         self.storedStack = stack
         self.storedUndoStack = undoStack
+        self.storedTemplate = template
         self.continueDrawingButton.isEnabled = true
     }
     

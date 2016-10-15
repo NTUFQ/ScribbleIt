@@ -11,10 +11,10 @@ import FBSDKCoreKit
 import PopupDialog
 
 protocol StoreStateDelegate {
-    func storeState(current: UIImage?, stack: [UIImage?], undoStack: [UIImage?])
+    func storeState(current: UIImage?, stack: [UIImage?], undoStack: [UIImage?], template: Template?)
 }
 
-class DrawingViewController: UIViewController {
+class DrawingViewController: UIViewController, SelectTemplateDelegate {
     
     
     var delegate: StoreStateDelegate? = nil
@@ -29,7 +29,14 @@ class DrawingViewController: UIViewController {
     @IBOutlet weak var redoButton: UIButton!
     @IBOutlet weak var templateButton: UIButton!
     @IBOutlet weak var colorBox: UIView!
-
+    
+    @IBOutlet weak var templateView: UIImageView!
+    
+    func selectTemplate(template: Template?) {
+        self.template = template
+        self.templateView.image = template?.image
+        self.templateView.alpha = 0.3
+    }
 
     @IBAction func uploadImage(_ sender: AnyObject) {
         if let image = self.imageView.image {
@@ -204,7 +211,7 @@ class DrawingViewController: UIViewController {
     var current: UIImage? = nil
     var imageList: [UIImage?] = []
     var undoList: [UIImage?] = []
-    
+    var template: Template? = nil
     
     func image(image: UIImage, withPotentialError error: NSErrorPointer, contextInfo: UnsafeRawPointer) {
         UIAlertView(title: nil, message: "Image successfully saved to Photos library", delegate: nil, cancelButtonTitle: "Dismiss").show()
@@ -225,7 +232,13 @@ class DrawingViewController: UIViewController {
         blue = (0.0/255.0)
         
         // restore drawing
+        print("drawing view loading!!!")
+        self.imageView.image = current
         print(redoButton.isEnabled)
+        if self.template != nil {
+            self.templateView.image = template?.image
+            self.templateView.alpha = 0.3
+        }
         if imageList.isEmpty {
             undoButton.isEnabled = false
         }
@@ -451,8 +464,13 @@ class DrawingViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(self.delegate)
         if (self.delegate != nil){
-            self.delegate!.storeState(current: self.imageView.image, stack: imageList, undoStack: undoList)
+            self.delegate!.storeState(current: self.imageView.image, stack: imageList, undoStack: undoList, template: template)
+        }
+        if segue.identifier == "DrawToTemplate" {
+            let templateViewController: TemplateCollectionViewController = segue.destination as! TemplateCollectionViewController
+            templateViewController.selectTemplateDelegate = self
         }
     }
 }
