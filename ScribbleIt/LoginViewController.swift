@@ -21,6 +21,7 @@ class LoginViewController: UIViewController{
             print("already logged in")
             self.toMenu()
         }
+        self.view.backgroundColor = UIColor.init(patternImage: #imageLiteral(resourceName: "LOGINBG"))
     }
     @IBAction func clickPlayAsGuest(_ sender: AnyObject) {
         self.toMenu()

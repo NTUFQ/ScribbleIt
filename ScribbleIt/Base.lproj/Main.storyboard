@@ -22,82 +22,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jen-zj-TxZ" customClass="CardView" customModule="ScribbleIt" customModuleProvider="target">
-                                <frame key="frameInset" minX="44" minY="74" width="933" height="494"/>
+                                <frame key="frameInset" minX="46" minY="115" width="933" height="450"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BcC-gD-vny">
-                                        <frame key="frameInset" minX="105" minY="138" width="243" height="148"/>
-                                        <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
-                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gc9-Pl-d2e">
-                                        <frame key="frameInset" minX="0.83599999999999997" minY="0.57030000000000003" width="221" height="252"/>
+                                        <frame key="frameInset" minX="38" minY="32" width="221" height="252"/>
                                         <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="23D-KC-i8k">
-                                        <frame key="frameInset" minX="249" minY="318" width="237" height="101"/>
+                                        <frame key="frameInset" minX="362" minY="289" width="237" height="101"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4V7-Ru-TLp">
-                                        <frame key="frameInset" minX="30" width="110" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <state key="normal" title="CLEAR"/>
-                                        <connections>
-                                            <action selector="clearImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aUe-wX-QkR"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g94-xH-3uC">
-                                        <frame key="frameInset" minX="188" minY="-2" width="77" height="38"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <state key="normal" title="Back"/>
-                                        <connections>
-                                            <segue destination="Opf-7a-bCs" kind="unwind" unwindAction="backToMenu:" id="XEN-up-Wf9"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAf-8d-Gaa">
-                                        <frame key="frameInset" minX="355" minY="-11" width="111" height="57"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <state key="normal" title="Template"/>
-                                        <connections>
-                                            <action selector="chooseTemplate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zoJ-fg-YUg"/>
-                                            <segue destination="jgT-YW-0Uk" kind="show" identifier="DrawToTemplate" id="ZDa-tW-eLz"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weI-XG-Vqa">
-                                        <frame key="frameInset" minX="543" minY="3" width="79" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Undo"/>
-                                        <connections>
-                                            <action selector="undo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oWr-ra-ACd"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ug-Q2-EEa">
-                                        <frame key="frameInset" minX="649" minY="-2" width="79" height="41"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Redo"/>
-                                        <connections>
-                                            <action selector="redo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dww-hf-Dfw"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tm9-RG-JV5">
-                                        <frame key="frameInset" minX="847" minY="3" width="86" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <state key="normal" title="SAVE"/>
-                                        <connections>
-                                            <action selector="saveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fVr-lU-c2d"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLP-zE-YNL">
-                                        <frame key="frameInset" minX="792" minY="4" width="47" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="upload"/>
-                                        <connections>
-                                            <action selector="uploadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cXf-9I-g79"/>
-                                        </connections>
-                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BcC-gD-vny">
+                                        <frame key="frameInset" minX="512" minY="66" width="243" height="148"/>
+                                        <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -225,7 +162,7 @@
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vQg-fF-Bkm">
-                                        <frame key="frameInset" minX="-16" minY="-31" width="1000" height="1000"/>
+                                        <frame key="frameInset" minX="-38" minY="-61" width="1000" height="1000"/>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -254,6 +191,69 @@
                                     <constraint firstItem="dgA-ts-gu5" firstAttribute="top" secondItem="Key-gG-aZq" secondAttribute="bottom" constant="27" id="npJ-0e-Jab"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAf-8d-Gaa">
+                                <frame key="frameInset" minX="255" minY="58" width="111" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Template"/>
+                                <connections>
+                                    <action selector="chooseTemplate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zoJ-fg-YUg"/>
+                                    <segue destination="jgT-YW-0Uk" kind="show" identifier="DrawToTemplate" id="ZDa-tW-eLz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weI-XG-Vqa">
+                                <frame key="frameInset" minX="590" minY="71" width="79" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Undo"/>
+                                <connections>
+                                    <action selector="undo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oWr-ra-ACd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ug-Q2-EEa">
+                                <frame key="frameInset" minX="704" minY="65" width="79" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Redo"/>
+                                <connections>
+                                    <action selector="redo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dww-hf-Dfw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLP-zE-YNL">
+                                <frame key="frameInset" minX="817" minY="70" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="upload"/>
+                                <connections>
+                                    <action selector="uploadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cXf-9I-g79"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4V7-Ru-TLp">
+                                <frame key="frameInset" minX="20" minY="66" width="110" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="CLEAR"/>
+                                <connections>
+                                    <action selector="clearImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aUe-wX-QkR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tm9-RG-JV5">
+                                <frame key="frameInset" minX="906" minY="72" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="SAVE"/>
+                                <connections>
+                                    <action selector="saveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fVr-lU-c2d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g94-xH-3uC">
+                                <frame key="frameInset" minX="138" minY="62" width="77" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="Opf-7a-bCs" kind="unwind" unwindAction="backToMenu:" id="XEN-up-Wf9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -368,28 +368,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTK-Ay-ym0">
-                                <frame key="frameInset" minX="347" minY="411" width="331" height="61"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e60-BE-J15">
+                                <frame key="frameInset" minX="262" minY="492" width="500" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Login Button"/>
-                                <connections>
-                                    <action selector="testLogin:" destination="jbH-ck-Zmt" eventType="touchUpInside" id="rCB-Hg-XtU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e60-BE-J15">
-                                <frame key="frameInset" minX="347" minY="512" width="331" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Play as guest"/>
+                                <state key="normal" image="GUESTBUTTON"/>
                                 <connections>
                                     <action selector="clickPlayAsGuest:" destination="jbH-ck-Zmt" eventType="touchUpInside" id="uV7-j0-dQS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTK-Ay-ym0">
+                                <frame key="frameInset" minX="25.49%" minY="50.33%" width="48.88%" height="7.94%"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Login Button" image="LOGINBUTTON"/>
+                                <connections>
+                                    <action selector="testLogin:" destination="jbH-ck-Zmt" eventType="touchUpInside" id="rCB-Hg-XtU"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="hJi-Jf-qHe"/>
                     <connections>
@@ -438,54 +435,62 @@
                                     <segue destination="gEA-3P-iIb" kind="unwind" unwindAction="clickLogOut:" id="S7I-Cb-esW"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oe2-II-loz">
-                                <frame key="frameInset" minX="645" minY="161" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Guest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSn-jz-ZC9">
-                                <frame key="frameInset" minX="645" minY="395" width="200" height="39"/>
+                                <frame key="frameInset" minX="645" minY="407" width="200" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2w1-uX-UXJ">
-                                <frame key="frameInset" minX="178" minY="509" width="331" height="61"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pct-dt-Kzh">
+                                <frame key="frameInset" minX="178" minY="278" width="344" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Gallery"/>
-                                <connections>
-                                    <segue destination="1Ol-bP-MVd" kind="show" id="m8i-nY-Aug"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pct-dt-Kzh">
-                                <frame key="frameInset" minX="178" minY="302" width="331" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Continue drawing"/>
+                                <state key="normal" image="CONTINUE DRAWING"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="MenuToContinueDrawing" id="XBp-YV-knj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZ1-zm-Von">
-                                <frame key="frameInset" minX="178" minY="402" width="331" height="61"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZ1-zm-Von">
+                                <frame key="frameInset" minX="178" minY="373" width="344" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Daily Challenge"/>
+                                <state key="normal" image="DAILY CHALLENGE"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="l8e-Hz-agL"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cw1-IU-dDa">
-                                <frame key="frameInset" minX="178" minY="161" width="331" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5D1-hK-OwD">
+                                <frame key="frameInset" minX="178" minY="463" width="344" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <state key="normal" title="New Drawing"/>
+                                <state key="normal" image="COLLABORATION MODE"/>
+                                <connections>
+                                    <segue destination="p3h-dl-1JH" kind="show" id="IvL-i0-kEq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2w1-uX-UXJ">
+                                <frame key="frameInset" minX="178" minY="557" width="344" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" image="GALLERY"/>
+                                <connections>
+                                    <segue destination="1Ol-bP-MVd" kind="show" id="m8i-nY-Aug"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cw1-IU-dDa">
+                                <frame key="frameInset" minX="179" minY="176" width="343" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" image="NEW DRAWING"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="MenuToDrawing" id="ueK-E2-x2N"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oe2-II-loz">
+                                <frame key="frameInset" minX="645" minY="199" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -499,6 +504,35 @@
                 <exit id="gEA-3P-iIb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="860.7421875" y="951.5625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5HC-qB-8nq">
+            <objects>
+                <viewController id="p3h-dl-1JH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8C0-7C-YhI"/>
+                        <viewControllerLayoutGuide type="bottom" id="OUC-zb-3df"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d25-R5-oU4">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGF-UC-c0m">
+                                <frame key="frameInset" minX="84" minY="97" width="166" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="COLLABORATION BACK"/>
+                                <connections>
+                                    <segue destination="yiN-EG-oTl" kind="unwind" unwindAction="backToMenu:" id="amg-lt-dRl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NtX-Ay-npw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="yiN-EG-oTl" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1123" y="1803"/>
         </scene>
         <!--Artwork Gallery View Controller-->
         <scene sceneID="McP-Lx-bns">
@@ -584,7 +618,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ie-QW-ACt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="QCg-Nz-95H" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="959.76562499999989" y="1711.71875"/>
+            <point key="canvasLocation" x="387" y="1741"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ywe-53-iv4">
@@ -605,11 +639,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="COLLABORATION MODE" width="331" height="61"/>
+        <image name="CONTINUE DRAWING" width="331" height="61"/>
+        <image name="DAILY CHALLENGE" width="331" height="61"/>
+        <image name="GALLERY" width="331" height="61"/>
+        <image name="GUESTBUTTON" width="500" height="61"/>
+        <image name="LOGINBUTTON" width="500" height="61"/>
+        <image name="NEW DRAWING" width="331" height="61"/>
         <image name="pencil_black" width="102" height="411"/>
         <image name="pencil_blue" width="102" height="411"/>
         <image name="pencil_red" width="102" height="411"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XBp-YV-knj"/>
+        <segue reference="l8e-Hz-agL"/>
     </inferredMetricsTieBreakers>
 </document>
