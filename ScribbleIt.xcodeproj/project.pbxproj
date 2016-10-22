@@ -58,7 +58,6 @@
 		07E207041DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E207031DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift */; };
 		07E207061DB1266A005FA4E8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E207051DB1266A005FA4E8 /* TestViewController.swift */; };
 		07E207081DB13DCE005FA4E8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E207071DB13DCE005FA4E8 /* CardView.swift */; };
-		2147EA051DBA9F5600F59007 /* GalleryTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2147EA041DBA9F5600F59007 /* GalleryTestController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,7 +138,6 @@
 		07E207031DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtworkGalleryViewController.swift; path = ../ArtworkGalleryViewController.swift; sourceTree = "<group>"; };
 		07E207051DB1266A005FA4E8 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		07E207071DB13DCE005FA4E8 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		2147EA041DBA9F5600F59007 /* GalleryTestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryTestController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,7 +252,6 @@
 				074543181DB235A800B397AA /* TemplateCollectionViewController.swift */,
 				07E207051DB1266A005FA4E8 /* TestViewController.swift */,
 				0745431C1DB239F200B397AA /* TemplateCollectionViewCell.swift */,
-				2147EA041DBA9F5600F59007 /* GalleryTestController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -439,7 +436,6 @@
 				07736AED1DAA005B002BA895 /* ColorSlider.swift in Sources */,
 				07E207021DB10CE3005FA4E8 /* ArtworkGalleryCellTableViewCell.swift in Sources */,
 				074543191DB235A800B397AA /* TemplateCollectionViewController.swift in Sources */,
-				2147EA051DBA9F5600F59007 /* GalleryTestController.swift in Sources */,
 				070076AE1D9E36C80017D22C /* AppDelegate.swift in Sources */,
 				07E207081DB13DCE005FA4E8 /* CardView.swift in Sources */,
 				07D69FBB1DAA4BE800BBEA05 /* API.swift in Sources */,
