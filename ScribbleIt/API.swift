@@ -133,7 +133,7 @@ class API{
     init() {
         //Alamofire.request("http://127.0.0.1:8000/api/artwork/5").validate().responseJSON{_ in }
     }
-    let URL = "http://127.0.0.1:8000"
+    let URL = "http://128.199.250.111:3002"
     
     // I dont know how to handle asynchronic request as normal function... just use callback
     // Example:
