@@ -12,12 +12,14 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
     
     @IBOutlet weak var artworkTableView: UITableView!
     
+    
     var artworks: [Artwork]? = nil
     var api = API()
     let cellIdentifier = "Cell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.init(patternImage: #imageLiteral(resourceName: "LOGINBG"))
         if FBSDKAccessToken.current() != nil{
             loadArtworks(ownerId: FBSDKAccessToken.current().userID)
         }
@@ -59,7 +61,7 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
 
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ArtworkGalleryCellTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ArtworkGalleryTableViewCell
         if let artwork = artworks?[indexPath.row]{
         cell.owner.text = artwork.owner_name!
         cell.like.text = String(describing: artwork.like?.count)
