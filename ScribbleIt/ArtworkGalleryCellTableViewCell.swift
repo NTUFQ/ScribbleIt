@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ArtworkGalleryCellTableViewCell: UITableViewCell {
+class ArtworkGalleryTableViewCell: UITableViewCell {
     // properties
     @IBOutlet weak var Picture: UIImageView!
     @IBOutlet weak var owner: UILabel!

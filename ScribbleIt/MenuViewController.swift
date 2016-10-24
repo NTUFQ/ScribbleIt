@@ -92,6 +92,11 @@ class MenuViewController: UIViewController, StoreStateDelegate{
     
     @IBAction func backToMenu(_ segue: UIStoryboardSegue){}
     
+    @IBAction func logout(_ sender: AnyObject) {
+        if FBSDKAccessToken.current() != nil {
+            FBSDKLoginManager().logOut()
+        }
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let id = segue.identifier{
             switch id{
