@@ -432,6 +432,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Log out"/>
                                 <connections>
+                                    <action selector="logout:" destination="F4r-oA-8CQ" eventType="touchUpInside" id="H1h-Yj-3va"/>
                                     <segue destination="gEA-3P-iIb" kind="unwind" unwindAction="clickLogOut:" id="S7I-Cb-esW"/>
                                 </connections>
                             </button>
