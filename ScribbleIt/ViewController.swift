@@ -16,7 +16,6 @@ protocol StoreStateDelegate {
 
 class DrawingViewController: UIViewController, SelectTemplateDelegate {
     
-    
     var delegate: StoreStateDelegate? = nil
     
     @IBOutlet weak var uploadButton: UIButton!

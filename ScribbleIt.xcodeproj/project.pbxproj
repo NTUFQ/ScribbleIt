@@ -58,6 +58,7 @@
 		07E207041DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E207031DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift */; };
 		07E207061DB1266A005FA4E8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E207051DB1266A005FA4E8 /* TestViewController.swift */; };
 		07E207081DB13DCE005FA4E8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E207071DB13DCE005FA4E8 /* CardView.swift */; };
+		2147EA071DC36ADE00F59007 /* sketch_gothic_light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2147EA061DC36ADD00F59007 /* sketch_gothic_light.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,7 @@
 		07E207031DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtworkGalleryViewController.swift; path = ../ArtworkGalleryViewController.swift; sourceTree = "<group>"; };
 		07E207051DB1266A005FA4E8 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		07E207071DB13DCE005FA4E8 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		2147EA061DC36ADD00F59007 /* sketch_gothic_light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sketch_gothic_light.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 		0745431B1DB235DC00B397AA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2147EA061DC36ADD00F59007 /* sketch_gothic_light.otf */,
 				07E207071DB13DCE005FA4E8 /* CardView.swift */,
 				07736AEC1DAA005B002BA895 /* ColorSlider.swift */,
 				070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */,
@@ -399,6 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2147EA071DC36ADE00F59007 /* sketch_gothic_light.otf in Resources */,
 				07008D3D1DB155D800D8210B /* Main.storyboard in Resources */,
 				070076B81D9E36C80017D22C /* LaunchScreen.storyboard in Resources */,
 				070076B51D9E36C80017D22C /* Assets.xcassets in Resources */,

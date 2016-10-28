@@ -19,7 +19,6 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.init(patternImage: #imageLiteral(resourceName: "LOGINBG"))
         if FBSDKAccessToken.current() != nil{
             loadArtworks(ownerId: FBSDKAccessToken.current().userID)
         }

@@ -35,7 +35,6 @@ class MenuViewController: UIViewController, StoreStateDelegate{
         self.continueDrawingButton.isEnabled = false
         self.navigationController?.navigationBar.isHidden = true
         
-        self.view.backgroundColor = UIColor.init(patternImage: #imageLiteral(resourceName: "Background"))
         if FBSDKAccessToken.current() != nil{
             print(FBSDKAccessToken.current())
             
