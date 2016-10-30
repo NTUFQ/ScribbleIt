@@ -67,7 +67,7 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
         cell.selectionStyle = .none
         if let artwork = artworks?[indexPath.row]{
         cell.owner.text = artwork.owner_name!
-        cell.like.text = String(describing: artwork.like?.count)
+        cell.like.text = "\(artwork.like!.count)"
         if let url = artwork.url{
             cell.Picture.imageFromUrl(urlString: url)
             }
