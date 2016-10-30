@@ -366,11 +366,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BTK-Ay-ym0">
-<<<<<<< HEAD
-                                <frame key="frameInset" minX="25.39%" minY="50.52%" width="49.02%" height="7.81%"/>
-=======
                                 <frame key="frameInset" minX="25.34%" minY="50.52%" width="49.02%" height="7.81%"/>
->>>>>>> 8c6c89f8f24289fb2373ec1703269cf682d42355
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Login Button" image="LOGINBUTTON"/>
@@ -541,7 +537,7 @@
                                         <rect key="frame" x="0.0" y="92" width="588" height="437"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3AL-um-GoT" id="gYJ-5h-seN">
-                                            <frame key="frameInset" width="588" height="436"/>
+                                            <frame key="frameInset" width="588" height="436.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" misplaced="YES" id="eB4-mC-cXz" customClass="CardView" customModule="ScribbleIt" customModuleProvider="target">
