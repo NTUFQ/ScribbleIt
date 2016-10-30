@@ -20,7 +20,7 @@ protocol RestoreStateDelegate {
 class MenuViewController: UIViewController, StoreStateDelegate{
     
 
-    @IBOutlet weak var pofileImage: UIImageView!
+    @IBOutlet weak var pofileImage: SwiftyAvatar!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var continueDrawingButton: UIButton!
     var user: UserInfo?
@@ -32,6 +32,7 @@ class MenuViewController: UIViewController, StoreStateDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.continueDrawingButton.isEnabled = false
         self.navigationController?.navigationBar.isHidden = true
         

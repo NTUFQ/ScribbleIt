@@ -14,8 +14,9 @@ class ArtworkGalleryTableViewCell: UITableViewCell {
     @IBOutlet weak var owner: UILabel!
     @IBOutlet weak var like: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
-    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileImage: SwiftyAvatar!
     @IBOutlet weak var likeView: UIView!
+    @IBOutlet weak var time: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

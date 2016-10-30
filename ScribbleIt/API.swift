@@ -72,8 +72,9 @@ class Artwork{
     var like: [Like]?
     var template_id: Int?
     var template_name: String?
+    var time: String
     
-    init(pk: Int, name: String?, url: String?, owner_id: String?, owner_name: String?, comment: [Comment]?, like: [Like]?, template_id: Int?, template_name: String?) {
+    init(pk: Int, name: String?, url: String?, owner_id: String?, owner_name: String?, comment: [Comment]?, like: [Like]?, template_id: Int?, template_name: String?, time: String) {
         self.pk = pk
         self.name = name
         self.url = url
@@ -83,6 +84,7 @@ class Artwork{
         self.like = like
         self.template_id = template_id
         self.template_name = template_name
+        self.time = time
     }
     
     init(json: JSON) {
@@ -100,6 +102,7 @@ class Artwork{
         }
         self.template_id = json["template", "id"].int
         self.template_name = json["template", "name"].string
+        self.time = json["created_by"].stringValue
     }
 }
 
