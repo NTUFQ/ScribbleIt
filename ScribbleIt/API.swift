@@ -151,11 +151,31 @@ class API{
             switch response.result {
             case .success:
                 let json = JSON(data: response.data!)
+                print(json)
                 let artwork = Artwork(json: json)
                 completeHandler(artwork)
             case .failure(let error):
                 print(error)
                 completeHandler(nil)
+            }
+        }
+    }
+    
+    func getDiscover(completeHandler: @escaping (_ artworks: [Artwork]?) -> ()){
+        Alamofire.request(URL + "/api/discover/").validate().responseJSON{
+            response in
+            switch response.result {
+            case .success:
+                var artworks = [Artwork]()
+                let json = JSON(data: response.data!)
+                print(json["results"])
+                for (_, artworkJson) in json["results"]{
+                    artworks.append(Artwork(json: artworkJson))
+                }
+                completeHandler(artworks)
+                break
+            case .failure:
+                print("failed to get discovery data")
             }
         }
     }

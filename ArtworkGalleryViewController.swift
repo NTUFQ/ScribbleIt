@@ -32,6 +32,28 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+    @IBAction func loadDiscover(_ sender: AnyObject) {
+        api.getDiscover{
+            (artwork_list: [Artwork]?) in
+//            var a_list = [Artwork]()
+//            if FBSDKAccessToken.current() != nil{
+//                for artwork in artwork_list!{
+//                    if artwork.owner_id != FBSDKAccessToken.current().userID{
+//                        a_list.append(artwork)
+//                    }
+//                }
+//                self.artworks = a_list
+//                self.artworkTableView.reloadData()
+//            }
+//            else{
+//                self.artworks = artwork_list
+//                self.artworkTableView.reloadData()
+//            }
+            self.artworks = artwork_list
+            self.artworkTableView.reloadData()
+        }
+    }
+    
     func loadArtworks(ownerId: String){
         api.getUser(pk: ownerId){
             (user: UserInfo?) in

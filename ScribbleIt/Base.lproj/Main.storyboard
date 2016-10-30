@@ -185,22 +185,6 @@
                                             <action selector="chooseTool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CiY-jI-TDO"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="center" misplaced="YES" id="jvL-KS-ypa" customClass="SwiftyAvatar" customModule="ScribbleIt" customModuleProvider="target">
-                                        <frame key="frameInset" minX="77" minY="8" width="80" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="roundness">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" cocoaTouchSystemColor="lightTextColor"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
                                     <button opaque="NO" tag="13" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mEq-Xe-KB5">
                                         <frame key="frameInset" minX="440" minY="13" width="75" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -257,6 +241,22 @@
                                             <action selector="chooseColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wW2-yu-blg"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="center" misplaced="YES" id="jvL-KS-ypa" customClass="SwiftyAvatar" customModule="ScribbleIt" customModuleProvider="target">
+                                        <frame key="frameInset" minX="68" minY="62" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="weI-XG-Vqa">
@@ -650,6 +650,19 @@
                                 <connections>
                                     <segue destination="QCg-Nz-95H" kind="unwind" unwindAction="backToMenu:" id="d2X-qy-RLL"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vmI-cE-s26">
+                                <frame key="frameInset" minX="101" minY="262" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Discovery"/>
+                                <connections>
+                                    <action selector="loadDiscover:" destination="1Ol-bP-MVd" eventType="touchUpInside" id="3Fn-Il-DgI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2PW-ri-Nap">
+                                <frame key="frameInset" minX="99" minY="309" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="My Gallery"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.84290907118055558" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
