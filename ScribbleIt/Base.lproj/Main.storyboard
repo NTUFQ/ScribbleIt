@@ -185,10 +185,21 @@
                                             <action selector="chooseTool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CiY-jI-TDO"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="center" misplaced="YES" id="jvL-KS-ypa">
-                                        <frame key="frameInset" minX="77" minY="8" width="73" height="66"/>
+                                    <view contentMode="center" misplaced="YES" id="jvL-KS-ypa" customClass="SwiftyAvatar" customModule="ScribbleIt" customModuleProvider="target">
+                                        <frame key="frameInset" minX="77" minY="8" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" tag="13" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mEq-Xe-KB5">
                                         <frame key="frameInset" minX="440" minY="13" width="75" height="75"/>
@@ -234,7 +245,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button autoresizesSubviews="NO" opaque="NO" tag="12" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uyw-Z6-4ax">
+                                    <button autoresizesSubviews="NO" opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uyw-Z6-4ax">
                                         <frame key="frameInset" minX="534" minY="103" width="75" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -243,7 +254,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="chooseTool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iAf-DR-TzO"/>
+                                            <action selector="chooseColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wW2-yu-blg"/>
                                         </connections>
                                     </button>
                                 </subviews>

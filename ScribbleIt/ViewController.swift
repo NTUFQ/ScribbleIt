@@ -31,6 +31,7 @@ class DrawingViewController: UIViewController, SelectTemplateDelegate {
     
     @IBOutlet weak var templateView: UIImageView!
     
+    
     func selectTemplate(template: Template?) {
         self.template = template
         self.templateView.image = template?.image
@@ -88,6 +89,9 @@ class DrawingViewController: UIViewController, SelectTemplateDelegate {
         print(sender.tag)
         if(sender.tag > 0 && sender.tag < fixColors.count){
             (red, green, blue) = fixColors[sender.tag]
+            if sender.tag == 4 { //eraser
+                self.tool = 1
+            }
         }
         else{
             (red, green, blue) = fixColors[0]
@@ -195,10 +199,10 @@ class DrawingViewController: UIViewController, SelectTemplateDelegate {
     var keyboardHeight = 450
     let fixColors : [(CGFloat, CGFloat, CGFloat)] = [
         (0, 0, 0),
-        (0, 0, 0),
-        (1.0, 0, 0),
-        (0, 0, 1.0),
-        (51.0 / 255.0, 204.0 / 255.0, 1.0),
+        (0, 0, 0),//black
+        (1.0, 0, 0),//red
+        (0, 0, 1.0),//blue
+        (1.0, 1.0, 1.0),
         (102.0 / 255.0, 204.0 / 255.0, 0),
         (102.0 / 255.0, 1.0, 0),
         (160.0 / 255.0, 82.0 / 255.0, 45.0 / 255.0),
