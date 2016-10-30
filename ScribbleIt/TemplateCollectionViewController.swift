@@ -29,10 +29,10 @@ class TemplateCollectionViewController: UICollectionViewController {
     private let reuseIdentifier = "TemplateCell"
     var selectTemplateDelegate: SelectTemplateDelegate? = nil
     let templates: [Template?] =
-        [Template(id: 1, name: "template sample", image: UIImage(named: "pencil_black")),
+        [Template(id: 1, name: "Eeyore", image: UIImage(named: "eeyoreTrace")),
          Template(id: 2, name: "Diamond", image: UIImage(named: "template2")),
-         Template(id: 3, name: "template sample3", image: UIImage(named: "pencil_black")),
-         Template(id: 4, name: "template sample4", image: UIImage(named: "pencil_black"))
+         Template(id: 3, name: "Doggy", image: UIImage(named: "doggy")),
+         Template(id: 4, name: "HelloKitty", image: UIImage(named: "HelloKitty"))
                                  ]
         
     override func viewDidLoad() {
