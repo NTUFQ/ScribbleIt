@@ -377,7 +377,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BTK-Ay-ym0">
-                                <frame key="frameInset" minX="25.39%" minY="50.52%" width="49.02%" height="7.81%"/>
+                                <frame key="frameInset" minX="25.34%" minY="50.52%" width="49.02%" height="7.81%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Login Button" image="LOGINBUTTON"/>
