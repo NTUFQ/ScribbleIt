@@ -234,7 +234,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button autoresizesSubviews="NO" opaque="NO" tag="12" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uyw-Z6-4ax">
+                                    <button autoresizesSubviews="NO" opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uyw-Z6-4ax">
                                         <frame key="frameInset" minX="534" minY="103" width="75" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -243,7 +243,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="chooseTool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iAf-DR-TzO"/>
+                                            <action selector="chooseColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wW2-yu-blg"/>
                                         </connections>
                                     </button>
                                 </subviews>
