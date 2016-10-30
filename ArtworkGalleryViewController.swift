@@ -8,6 +8,8 @@
 
 import UIKit
 import FBSDKCoreKit
+import SwiftyJSON
+import FaveButton
 class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var artworkTableView: UITableView!
@@ -20,6 +22,7 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         if FBSDKAccessToken.current() != nil{
+            print("user found!")
             loadArtworks(ownerId: FBSDKAccessToken.current().userID)
         }
         // Uncomment the following line to preserve selection between presentations
@@ -61,22 +64,35 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ArtworkGalleryTableViewCell
+        cell.selectionStyle = .none
         if let artwork = artworks?[indexPath.row]{
         cell.owner.text = artwork.owner_name!
         cell.like.text = String(describing: artwork.like?.count)
         if let url = artwork.url{
             cell.Picture.imageFromUrl(urlString: url)
             }
-            if let comments = artwork.comment{
-                print("8888888")
-                print(comments)
-                for comment in comments{
-                    let commentLine = (comment.owner_name)! + ": " + (comment.text)
-
-                    cell.commentLabel.text = commentLine
+            
+            let pictureParameters = [
+                "width": 50,
+                "height": 50,
+                "redirect": "false"
+                ] as [String : Any]
+            let pictureGraphRequest = FBSDKGraphRequest(graphPath: "/"+artwork.owner_id!+"/picture", parameters: pictureParameters)
+            pictureGraphRequest?.start(){
+                (_: FBSDKGraphRequestConnection?, result: Any?, error: Error?) in
+                print("request for picture")
+                if let error = error{
+                    print(error)
+                }
+                else{
+                    print(result)
+                    let json = JSON(result!)
+                    let url = json["data", "url"].stringValue
+                cell.profileImage.imageFromUrl(urlString: url)
                 }
             }
         }
+
         return cell
     }
 

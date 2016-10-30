@@ -4,3 +4,4 @@ github "facebook/facebook-sdk-swift"
 github "SimplicityMobile/Simplicity"
 github "Orderella/PopupDialog" ~> 0.5
 github "corin8823/Popover"
+github "xhamr/fave-button"
