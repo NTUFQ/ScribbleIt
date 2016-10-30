@@ -137,60 +137,40 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" tag="10" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8HI-TY-rpz">
-                                        <frame key="frameInset" minX="346" minY="103" width="75" height="75"/>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8HI-TY-rpz">
+                                        <frame key="frameInset" minX="642" minY="116" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
-                                        <state key="normal" title="CIRCLE">
+                                        <state key="normal" image="Circle">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="chooseTool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0LQ-jK-EWP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="11" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tAi-07-f8f">
-                                        <frame key="frameInset" minX="346" minY="13" width="75" height="75"/>
+                                    <button opaque="NO" tag="11" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tAi-07-f8f">
+                                        <frame key="frameInset" minX="642" minY="42" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
-                                        <state key="normal" title="SQUARE">
+                                        <state key="normal" title="SQUARE" image="Rectangle">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="chooseTool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lix-yw-sPP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="F4l-4e-WjD">
-                                        <frame key="frameInset" minX="440" minY="103" width="75" height="75"/>
+                                    <button autoresizesSubviews="NO" opaque="NO" tag="12" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="A45-CV-DOG">
+                                        <frame key="frameInset" minX="723" minY="52" width="50" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
-                                        <state key="normal" title="LINE">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="chooseTool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="stF-gN-qIn"/>
-                                        </connections>
-                                    </button>
-                                    <button autoresizesSubviews="NO" opaque="NO" tag="12" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="A45-CV-DOG">
-                                        <frame key="frameInset" minX="534" minY="13" width="75" height="75"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
-                                        <state key="normal" title="OVAL">
+                                        <state key="normal" image="Oval">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="chooseTool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CiY-jI-TDO"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="13" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mEq-Xe-KB5">
-                                        <frame key="frameInset" minX="440" minY="13" width="75" height="75"/>
+                                    <button opaque="NO" tag="13" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mEq-Xe-KB5">
+                                        <frame key="frameInset" minX="723" minY="116" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
-                                        <state key="normal" title="STAR">
+                                        <state key="normal" image="Star">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -202,39 +182,37 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </view>
                                     <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" id="dgA-ts-gu5">
-                                        <frame key="frameInset" minX="783" minY="116" width="163" height="31"/>
+                                        <frame key="frameInset" minX="815" minY="126" width="163" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <action selector="changeOpacity:" destination="BYZ-38-t0r" eventType="valueChanged" id="pVO-hR-U6t"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="9" minValue="0.0" maxValue="30" id="Key-gG-aZq">
-                                        <frame key="frameInset" minX="783" minY="44" width="163" height="31"/>
+                                        <frame key="frameInset" minX="815" minY="52" width="163" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <action selector="changeBrashWidth:" destination="BYZ-38-t0r" eventType="valueChanged" id="UZH-1K-QVH"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="OPACITY" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N5Z-6M-7Sa">
-                                        <frame key="frameInset" minX="678" minY="116" width="99" height="26"/>
+                                        <frame key="frameInset" minX="847" minY="92" width="99" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="BRUSH SIZE" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NwB-8G-YyP">
-                                        <frame key="frameInset" minX="639" minY="46" width="138" height="26"/>
+                                        <frame key="frameInset" minX="827" minY="18" width="138" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button autoresizesSubviews="NO" opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uyw-Z6-4ax">
-                                        <frame key="frameInset" minX="534" minY="103" width="75" height="75"/>
+                                    <button autoresizesSubviews="NO" opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uyw-Z6-4ax">
+                                        <frame key="frameInset" minX="346" minY="29" width="96" height="165"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
-                                        <state key="normal" title="ERASER">
+                                        <state key="normal" image="eraser">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -257,6 +235,16 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="F4l-4e-WjD">
+                                        <frame key="frameInset" minX="556" minY="92" width="45" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="line">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="chooseTool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="stF-gN-qIn"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="weI-XG-Vqa">
@@ -377,7 +365,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BTK-Ay-ym0">
-                                <frame key="frameInset" minX="25.34%" minY="50.52%" width="49.02%" height="7.81%"/>
+                                <frame key="frameInset" minX="25.34%" minY="50.52%" width="49.02%" height="7.75%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Login Button" image="LOGINBUTTON"/>
@@ -722,11 +710,17 @@
     <resources>
         <image name="COLLABORATION MODE" width="331" height="61"/>
         <image name="CONTINUE DRAWING" width="331" height="61"/>
+        <image name="Circle" width="102" height="102"/>
         <image name="DAILY CHALLENGE" width="331" height="61"/>
         <image name="GALLERY" width="331" height="61"/>
         <image name="GUESTBUTTON" width="500" height="61"/>
         <image name="LOGINBUTTON" width="500" height="61"/>
         <image name="NEW DRAWING" width="331" height="61"/>
+        <image name="Oval" width="102" height="62"/>
+        <image name="Rectangle" width="100" height="100"/>
+        <image name="Star" width="96" height="91"/>
+        <image name="eraser" width="202" height="308"/>
+        <image name="line" width="123" height="75"/>
         <image name="pencil_black" width="102" height="411"/>
         <image name="pencil_blue" width="102" height="411"/>
         <image name="pencil_red" width="102" height="411"/>
