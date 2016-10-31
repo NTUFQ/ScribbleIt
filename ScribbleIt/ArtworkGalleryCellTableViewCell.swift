@@ -8,7 +8,8 @@
 
 import UIKit
 import FaveButton
-class ArtworkGalleryTableViewCell: UITableViewCell {
+import FBSDKCoreKit
+class ArtworkGalleryTableViewCell: UITableViewCell, FaveButtonDelegate {
     // properties
     @IBOutlet weak var Picture: UIImageView!
     @IBOutlet weak var owner: UILabel!
@@ -19,16 +20,20 @@ class ArtworkGalleryTableViewCell: UITableViewCell {
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var commentButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
+    var likeButton: FaveButton?
+    var artwork: Artwork?
+    var likePk: Int?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        let likeButton = FaveButton(
+        likeButton = FaveButton(
             frame: CGRect(x: 0, y: 0, width: 30, height: 30),
             faveIconNormal: UIImage(named: "heart")
         )
-        likeButton.delegate = self
-        likeView.addSubview(likeButton)
+        likeButton?.delegate = self
+        likeView.addSubview(likeButton!)
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,5 +41,27 @@ class ArtworkGalleryTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func faveButton(_ faveButton: FaveButton, didSelected selected: Bool){
+        if !selected {
+            API().deleteLike(pk: likePk!){
+                result in
+                if result{
+                    self.like.text = String(Int(self.like.text!)! - 1)
+                    //self.likeButton?.isSelected = false
+                }
+            }
+        }
+        else{
+            API().postLike(ownerId: FBSDKAccessToken.current().userID, artworkId: (artwork?.pk)!){
+                result in
+                print(result)
+                self.likePk = result
+                    self.like.text = String(Int(self.like.text!)! + 1)
+                    //self.likeButton?.isSelected = true
+            }
+        }
+    }
+
 
 }

@@ -29,11 +29,14 @@ class TemplateCollectionViewController: UICollectionViewController {
     private let reuseIdentifier = "TemplateCell"
     var selectTemplateDelegate: SelectTemplateDelegate? = nil
     let templates: [Template?] =
-        [Template(id: 1, name: "Eeyore", image: UIImage(named: "eeyoreTrace")),
+        [
+        Template(id: 0, name: "No template", image: nil),
+        Template(id: 1, name: "Eeyore", image: UIImage(named: "eeyoreTrace")),
          Template(id: 2, name: "Diamond", image: UIImage(named: "template2")),
          Template(id: 3, name: "Doggy", image: UIImage(named: "doggy")),
-         Template(id: 4, name: "HelloKitty", image: UIImage(named: "HelloKitty"))
-                                 ]
+         Template(id: 4, name: "HelloKitty", image: UIImage(named: "HelloKitty")),
+         Template(id: 5, name: "Doraemon", image: UIImage(named: "doraemon")),
+        ]
         
     override func viewDidLoad() {
         super.viewDidLoad()

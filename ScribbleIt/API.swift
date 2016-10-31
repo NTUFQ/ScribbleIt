@@ -265,7 +265,7 @@ class API{
         }
     }
     
-    func postLike(ownerId: String, artworkId: Int, completeHandler: @escaping (_ result: Bool)->()) {
+    func postLike(ownerId: String, artworkId: Int, completeHandler: @escaping (_ pk: Int)->()) {
         let parameter = [
             "owner": ownerId,
             "artwork": artworkId
@@ -275,9 +275,11 @@ class API{
             response in
             switch response.result {
             case .success:
-                completeHandler(true)
+                let json = JSON(data: response.data!)
+                completeHandler(json["id"].intValue)
             case .failure:
-                completeHandler(false)
+                print("failed to like")
+                break
             }
         }
     }

@@ -105,6 +105,9 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+    @IBAction func loadMyGallery(_ sender: AnyObject) {
+        loadArtworks(ownerId: FBSDKAccessToken.current().userID)
+    }
     @IBAction func loadDiscover(_ sender: AnyObject) {
         api.getDiscover{
             (artwork_list: [Artwork]?) in
@@ -163,16 +166,27 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
         cell.selectionStyle = .none
         cell.commentButton.tag = indexPath.row
         if let artwork = artworks?[indexPath.row]{
+            cell.artwork = artwork
         cell.owner.text = artwork.owner_name!
         cell.like.text = "\(artwork.like!.count)"
-        cell.time.text = timeAgoSinceDate(date: artwork.time.toDateTime(), numericDates: true)
-        if  artwork.owner_id == FBSDKAccessToken.current().userID{
-            cell.deleteButton.tag = indexPath.row
+            cell.likeButton?.isSelected = false
+            for likeInfo in artwork.like!{
+                if likeInfo.owner_id == FBSDKAccessToken.current().userID{
+                    cell.likeButton?.isSelected = true
+                    cell.likePk = likeInfo.pk
+                }
             }
-        else{
-            cell.deleteButton.isHidden = true
+            cell.time.text = timeAgoSinceDate(date: artwork.time.toDateTime(), numericDates: true)
+            if  artwork.owner_id == FBSDKAccessToken.current().userID{
+                cell.deleteButton.tag = indexPath.row
+                cell.deleteButton.isHidden = false
             }
-        if let url = artwork.url{
+            else{
+                print("uuuuuuu")
+                print(artwork.owner_name)
+                cell.deleteButton.isHidden = true
+            }
+            if let url = artwork.url{
             cell.Picture.imageFromUrl(urlString: url)
             }
             

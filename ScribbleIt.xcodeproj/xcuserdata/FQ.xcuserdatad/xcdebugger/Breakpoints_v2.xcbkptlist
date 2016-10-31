@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ScribbleIt/API.swift"
-            timestampString = "499640005.968919"
+            timestampString = "499645619.923431"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "320"
-            endingLineNumber = "320"
+            startingLineNumber = "322"
+            endingLineNumber = "322"
             landmarkName = "postArtwork(name:picture:owner:template:completeHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ScribbleIt/API.swift"
-            timestampString = "499640005.968919"
+            timestampString = "499645619.923431"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "314"
-            endingLineNumber = "314"
+            startingLineNumber = "316"
+            endingLineNumber = "316"
             landmarkName = "postArtwork(name:picture:owner:template:completeHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ScribbleIt/API.swift"
-            timestampString = "499640005.968919"
+            timestampString = "499645619.923431"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "302"
-            endingLineNumber = "302"
+            startingLineNumber = "304"
+            endingLineNumber = "304"
             landmarkName = "postArtwork(name:picture:owner:template:completeHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ScribbleIt/LoginViewController.swift"
-            timestampString = "497821264.606357"
+            timestampString = "499643433.215421"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "testLogin(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ArtworkGalleryViewController.swift"
-            timestampString = "499641421.854582"
+            timestampString = "499646518.005285"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ArtworkGalleryViewController.swift"
-            timestampString = "499641421.854582"
+            timestampString = "499646730.536125"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ArtworkGalleryViewController.swift"
-            timestampString = "499641421.854582"
+            timestampString = "499646730.536125"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -303,6 +303,85 @@
                   startingLineNumber = "167"
                   endingLineNumber = "167"
                   offsetFromSymbolStart = "41">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ScribbleIt/TemplateCollectionViewController.swift"
+            timestampString = "499648995.725899"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "templates"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ScribbleIt/TemplateCollectionViewController.swift"
+            timestampString = "499648937.904292"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "templates"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScribbleIt.TemplateCollectionViewController.init (collectionViewLayout : __ObjC.UICollectionViewLayout) -&gt; ScribbleIt.TemplateCollectionViewController"
+                  moduleName = "ScribbleIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/FQ/Developer/iOS/ScribbleIt/ScribbleIt/ScribbleIt/TemplateCollectionViewController.swift"
+                  timestampString = "499648938.51885"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "289">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScribbleIt.TemplateCollectionViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; ScribbleIt.TemplateCollectionViewController"
+                  moduleName = "ScribbleIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/FQ/Developer/iOS/ScribbleIt/ScribbleIt/ScribbleIt/TemplateCollectionViewController.swift"
+                  timestampString = "499648938.521424"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "387">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScribbleIt.TemplateCollectionViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;ScribbleIt.TemplateCollectionViewController&gt;"
+                  moduleName = "ScribbleIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/FQ/Developer/iOS/ScribbleIt/ScribbleIt/ScribbleIt/TemplateCollectionViewController.swift"
+                  timestampString = "499648938.523365"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "289">
                </Location>
             </Locations>
          </BreakpointContent>
