@@ -230,7 +230,8 @@ class API{
             switch response.result {
             case .success:
                 completeHandler(true)
-            case .failure:
+            case .failure(let error):
+                print(error)
                 completeHandler(false)
             }
         }

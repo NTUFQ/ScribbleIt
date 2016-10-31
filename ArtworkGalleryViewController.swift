@@ -10,6 +10,8 @@ import UIKit
 import FBSDKCoreKit
 import SwiftyJSON
 import FaveButton
+import Popover
+import PopupDialog
 class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var artworkTableView: UITableView!
@@ -18,6 +20,57 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
     var artworks: [Artwork]? = nil
     var api = API()
     let cellIdentifier = "Cell"
+    var textInput: UITextField? = nil
+    
+    @IBAction func popoverShow(_ sender: AnyObject) {
+        let startPoint = CGPoint(x: self.view.frame.width - 60, y: 55)
+        let aView = UIView(frame: CGRect(x: 50, y: 0, width: self.view.frame.width - 100, height: 400))
+        if let artwork = artworks?[sender.tag]{
+            var text = ""
+            for comment in artwork.comment!{
+                text += comment.owner_name! + ": " + comment.text + "\n"
+            }
+            var textView = UITextView(frame: CGRect(x: 10, y: 50, width: aView.frame.width - 100, height: 300))
+            textView.text = text
+            textView.font = UIFont(name: (textView.font?.fontName)!, size: 25)
+            aView.addSubview(textView)
+        }
+        textInput = UITextField(frame: CGRect(x: 0, y: 300, width: aView.frame.width - 200, height: 50))
+        if textInput != nil {
+            textInput!.backgroundColor = UIColor.lightGray
+        }
+        let postButton = UIButton(frame: CGRect(x: textInput!.frame.maxX, y: 300, width: 80, height: 50))
+        postButton.backgroundColor = UIColor.red
+        postButton.setTitle("Post", for: .normal)
+        postButton.tag = sender.tag
+        postButton.addTarget(self, action: #selector(postComment(_:)), for: .touchUpInside)
+        aView.addSubview(textInput!)
+        aView.addSubview(postButton)
+        let popover = Popover()
+        popover.show(aView, point: startPoint)
+    }
+    
+    func postComment(_ sender: UIButton!) {
+        print(sender.tag)
+        if textInput != nil{
+            if !(textInput!.text!).isEmpty{
+                print(textInput!.text!)
+                print(FBSDKAccessToken.current().userID)
+                print(artworks![sender.tag].pk)
+//                API().postComment(commentText: "test2222", ownerId: "2113430318882027", artworkId: 6){
+//                    result in
+//                    print(result)
+//                }
+                API().postComment(commentText: textInput!.text!, ownerId: FBSDKAccessToken.current().userID, artworkId: artworks![sender.tag].pk){
+                    result in
+                    if result{
+                        print("good!!!")
+                    }
+                }
+            }
+        }
+        print("posted!!!")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +140,7 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ArtworkGalleryTableViewCell
         cell.selectionStyle = .none
+        cell.commentButton.tag = indexPath.row
         if let artwork = artworks?[indexPath.row]{
         cell.owner.text = artwork.owner_name!
         cell.like.text = "\(artwork.like!.count)"

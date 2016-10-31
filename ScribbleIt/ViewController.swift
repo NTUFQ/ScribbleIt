@@ -61,7 +61,6 @@ class DrawingViewController: UIViewController, SelectTemplateDelegate {
             }
             popup.addButtons([button1, button2])
             self.present(popup, animated: true, completion: nil)
-
         }
     }
     

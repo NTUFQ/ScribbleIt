@@ -51,6 +51,9 @@
 		077897A21DC5B084007B011A /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0778979E1DC5B084007B011A /* Ring.swift */; };
 		077897A31DC5B084007B011A /* Spark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0778979F1DC5B084007B011A /* Spark.swift */; };
 		077897A51DC60202007B011A /* SwiftAvator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077897A41DC60202007B011A /* SwiftAvator.swift */; };
+		077897A71DC640C1007B011A /* Popover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077897A61DC640C1007B011A /* Popover.framework */; };
+		077897A81DC640D1007B011A /* Popover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077897A61DC640C1007B011A /* Popover.framework */; };
+		077897A91DC640D1007B011A /* Popover.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 077897A61DC640C1007B011A /* Popover.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07D69FBB1DAA4BE800BBEA05 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D69FBA1DAA4BE800BBEA05 /* API.swift */; };
 		07D69FC41DAA6E7200BBEA05 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FC31DAA6E7200BBEA05 /* Alamofire.framework */; };
 		07D69FC51DAA709C00BBEA05 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FC31DAA6E7200BBEA05 /* Alamofire.framework */; };
@@ -97,6 +100,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				077897A91DC640D1007B011A /* Popover.framework in Embed Frameworks */,
 				0767E9011DABB58A006691F4 /* FacebookShare.framework in Embed Frameworks */,
 				0767E8FB1DABB58A006691F4 /* Bolts.framework in Embed Frameworks */,
 				077897931DC5810E007B011A /* FaveButton.framework in Embed Frameworks */,
@@ -147,6 +151,7 @@
 		0778979E1DC5B084007B011A /* Ring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
 		0778979F1DC5B084007B011A /* Spark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spark.swift; sourceTree = "<group>"; };
 		077897A41DC60202007B011A /* SwiftAvator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftAvator.swift; sourceTree = "<group>"; };
+		077897A61DC640C1007B011A /* Popover.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Popover.framework; path = ScribbleIt/Popover.framework; sourceTree = "<group>"; };
 		07D69FBA1DAA4BE800BBEA05 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		07D69FC31DAA6E7200BBEA05 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ScribbleIt/Alamofire.framework; sourceTree = "<group>"; };
 		07D69FC81DAA70C900BBEA05 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
@@ -170,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				077897A81DC640D1007B011A /* Popover.framework in Frameworks */,
 				0767E9041DABB58A006691F4 /* FBSDKLoginKit.framework in Frameworks */,
 				07D69FE21DABB44C00BBEA05 /* FacebookShare.framework in Frameworks */,
 				07D69FDF1DABB44C00BBEA05 /* Bolts.framework in Frameworks */,
@@ -194,6 +200,7 @@
 				0705899A1DAC005E00AE4F8D /* Simplicity.framework in Frameworks */,
 				07008D3F1DB1568500D8210B /* PopupDialog.framework in Frameworks */,
 				07D69FC91DAA70C900BBEA05 /* SwiftyJSON.framework in Frameworks */,
+				077897A71DC640C1007B011A /* Popover.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +314,7 @@
 		07D69FCD1DAA9A2500BBEA05 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				077897A61DC640C1007B011A /* Popover.framework */,
 				077897901DC580EF007B011A /* FaveButton.framework */,
 				07008D3E1DB1568500D8210B /* PopupDialog.framework */,
 				070589991DAC005E00AE4F8D /* Simplicity.framework */,
