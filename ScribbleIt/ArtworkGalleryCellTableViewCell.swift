@@ -18,6 +18,7 @@ class ArtworkGalleryTableViewCell: UITableViewCell {
     @IBOutlet weak var likeView: UIView!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var commentButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

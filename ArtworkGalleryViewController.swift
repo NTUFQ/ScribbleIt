@@ -71,6 +71,17 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
         print("posted!!!")
     }
     
+    @IBAction func deleteArtwork(_ sender: AnyObject) {
+        api.deleteArtwork(pk: (artworks?[sender.tag].pk)!){
+            result in
+            if result == true{
+                self.artworks?.remove(at: sender.tag)
+                self.artworkTableView.reloadData()
+            }
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if FBSDKAccessToken.current() != nil{
@@ -101,7 +112,7 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
 //                self.artworks = artwork_list
 //                self.artworkTableView.reloadData()
 //            }
-            self.artworks = artwork_list
+            self.artworks = artwork_list?.reversed()
             self.artworkTableView.reloadData()
         }
     }
@@ -110,7 +121,7 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
         api.getUser(pk: ownerId){
             (user: UserInfo?) in
             if user != nil {
-                self.artworks = user!.artwork
+                self.artworks = user!.artwork?.reversed()
                 self.name = (user!.artwork?.last?.owner_name)!
                 self.artworkTableView.reloadData()
             }
@@ -145,6 +156,12 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
         cell.owner.text = artwork.owner_name!
         cell.like.text = "\(artwork.like!.count)"
         cell.time.text = artwork.time
+        if  artwork.owner_id == FBSDKAccessToken.current().userID{
+            cell.deleteButton.tag = indexPath.row
+            }
+        else{
+            cell.deleteButton.isHidden = true
+            }
         if let url = artwork.url{
             cell.Picture.imageFromUrl(urlString: url)
             }

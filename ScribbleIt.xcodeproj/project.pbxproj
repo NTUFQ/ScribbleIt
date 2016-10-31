@@ -52,6 +52,7 @@
 		077897A71DC640C1007B011A /* Popover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077897A61DC640C1007B011A /* Popover.framework */; };
 		077897A81DC640D1007B011A /* Popover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077897A61DC640C1007B011A /* Popover.framework */; };
 		077897A91DC640D1007B011A /* Popover.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 077897A61DC640C1007B011A /* Popover.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07887DCE1DC7DC4700F98D20 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07887DCD1DC7DC4700F98D20 /* ChallengeViewController.swift */; };
 		07BBC0461DC7665800924C77 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BBC0451DC7665800924C77 /* LobbyViewController.swift */; };
 		07BBC0481DC76D4B00924C77 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BBC0471DC76D4B00924C77 /* Starscream.framework */; };
 		07BBC0491DC76D5300924C77 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BBC0471DC76D4B00924C77 /* Starscream.framework */; };
@@ -157,6 +158,7 @@
 		0778979F1DC5B084007B011A /* Spark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spark.swift; sourceTree = "<group>"; };
 		077897A41DC60202007B011A /* SwiftAvator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftAvator.swift; sourceTree = "<group>"; };
 		077897A61DC640C1007B011A /* Popover.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Popover.framework; path = ScribbleIt/Popover.framework; sourceTree = "<group>"; };
+		07887DCD1DC7DC4700F98D20 /* ChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		07BBC0451DC7665800924C77 /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
 		07BBC0471DC76D4B00924C77 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		07BBC04B1DC7A67900924C77 /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				07E207051DB1266A005FA4E8 /* TestViewController.swift */,
 				0745431C1DB239F200B397AA /* TemplateCollectionViewCell.swift */,
 				07BBC0451DC7665800924C77 /* LobbyViewController.swift */,
+				07887DCD1DC7DC4700F98D20 /* ChallengeViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				074543191DB235A800B397AA /* TemplateCollectionViewController.swift in Sources */,
 				070076AE1D9E36C80017D22C /* AppDelegate.swift in Sources */,
 				077897A21DC5B084007B011A /* Ring.swift in Sources */,
+				07887DCE1DC7DC4700F98D20 /* ChallengeViewController.swift in Sources */,
 				07E207081DB13DCE005FA4E8 /* CardView.swift in Sources */,
 				077897A51DC60202007B011A /* SwiftAvator.swift in Sources */,
 				07D69FBB1DAA4BE800BBEA05 /* API.swift in Sources */,

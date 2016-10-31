@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ScribbleIt/API.swift"
-            timestampString = "499626057.327039"
+            timestampString = "499640005.968919"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "296"
-            endingLineNumber = "296"
+            startingLineNumber = "320"
+            endingLineNumber = "320"
             landmarkName = "postArtwork(name:picture:owner:template:completeHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ScribbleIt/API.swift"
-            timestampString = "499626057.327039"
+            timestampString = "499640005.968919"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290"
+            startingLineNumber = "314"
+            endingLineNumber = "314"
             landmarkName = "postArtwork(name:picture:owner:template:completeHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ScribbleIt/API.swift"
-            timestampString = "499626057.327039"
+            timestampString = "499640005.968919"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "278"
-            endingLineNumber = "278"
+            startingLineNumber = "302"
+            endingLineNumber = "302"
             landmarkName = "postArtwork(name:picture:owner:template:completeHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ArtworkGalleryViewController.swift"
-            timestampString = "499627118.408432"
+            timestampString = "499640005.968919"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -143,7 +143,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "164"
             endingLineNumber = "164"
-            landmarkName = "getDiscover(completeHandler:)"
+            landmarkName = "deleteLike(pk:completeHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ScribbleIt/API.swift"
-            timestampString = "499528076.677062"
+            timestampString = "499640005.968919"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
             landmarkName = "getDiscover(completeHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ArtworkGalleryViewController.swift"
-            timestampString = "499627118.408432"
+            timestampString = "499640005.968919"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ArtworkGalleryViewController.swift"
-            timestampString = "499627118.408432"
+            timestampString = "499640005.968919"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -257,6 +257,54 @@
             endingLineNumber = "62"
             landmarkName = "postComment(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ScribbleIt/API.swift"
+            timestampString = "499640005.968919"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "deleteLike(pk:completeHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScribbleIt.API.getDiscover (completeHandler : (Swift.Optional&lt;Swift.Array&lt;ScribbleIt.Artwork&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ScribbleIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/FQ/Developer/iOS/ScribbleIt/ScribbleIt/ScribbleIt/API.swift"
+                  timestampString = "499639419.528525"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "165"
+                  endingLineNumber = "165"
+                  offsetFromSymbolStart = "37">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScribbleIt.API.(getDiscover (completeHandler : (Swift.Optional&lt;Swift.Array&lt;ScribbleIt.Artwork&gt;&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "ScribbleIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/FQ/Developer/iOS/ScribbleIt/ScribbleIt/ScribbleIt/API.swift"
+                  timestampString = "499639419.533738"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "167"
+                  endingLineNumber = "167"
+                  offsetFromSymbolStart = "41">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

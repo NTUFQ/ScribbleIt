@@ -161,6 +161,34 @@ class API{
         }
     }
     
+    func deleteLike(pk: Int, completeHandler: @escaping (_ result: Bool) -> ()) {
+        Alamofire.request(URL + "/api/like/" + String(pk), method: HTTPMethod.delete).validate().responseJSON{
+            response in
+            switch response.result{
+            case .success:
+                completeHandler(true)
+                break
+            case .failure(let error):
+                print(error)
+                completeHandler(false)
+            }
+        }
+    }
+    
+    func deleteArtwork(pk: Int, completeHandler: @escaping (_ result: Bool) -> ()){
+        Alamofire.request(URL + "/api/artwork/" + String(pk), method: HTTPMethod.delete).validate().responseJSON{
+            response in
+            switch response.result{
+            case .success:
+                completeHandler(true)
+                break
+            case .failure(let error):
+                print(error)
+                completeHandler(false)
+            }
+        }
+    }
+    
     func getDiscover(completeHandler: @escaping (_ artworks: [Artwork]?) -> ()){
         Alamofire.request(URL + "/api/discover/").validate().responseJSON{
             response in
