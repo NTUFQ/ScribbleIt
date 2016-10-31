@@ -98,7 +98,7 @@ class DrawingViewController: UIViewController, SelectTemplateDelegate {
         if(sender.tag > 0 && sender.tag < fixColors.count){
             (red, green, blue) = fixColors[sender.tag]
             if sender.tag == 4 { //eraser
-                self.tool = 1
+                self.tool = 0
             }
         }
         else{
@@ -210,7 +210,9 @@ class DrawingViewController: UIViewController, SelectTemplateDelegate {
         (0, 0, 0),//black
         (1.0, 0, 0),//red
         (0, 0, 1.0),//blue
-        (1.0, 1.0, 1.0),
+        (1.0, 1.0, 1.0),//eraser
+        (1.0, 1.0, 0), //yellow
+        (0.0, 1.0, 0), //green
         (102.0 / 255.0, 204.0 / 255.0, 0),
         (102.0 / 255.0, 1.0, 0),
         (160.0 / 255.0, 82.0 / 255.0, 45.0 / 255.0),
