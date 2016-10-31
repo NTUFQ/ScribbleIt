@@ -54,6 +54,11 @@
 		077897A71DC640C1007B011A /* Popover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077897A61DC640C1007B011A /* Popover.framework */; };
 		077897A81DC640D1007B011A /* Popover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077897A61DC640C1007B011A /* Popover.framework */; };
 		077897A91DC640D1007B011A /* Popover.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 077897A61DC640C1007B011A /* Popover.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07BBC0461DC7665800924C77 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BBC0451DC7665800924C77 /* LobbyViewController.swift */; };
+		07BBC0481DC76D4B00924C77 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BBC0471DC76D4B00924C77 /* Starscream.framework */; };
+		07BBC0491DC76D5300924C77 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BBC0471DC76D4B00924C77 /* Starscream.framework */; };
+		07BBC04A1DC76D5300924C77 /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07BBC0471DC76D4B00924C77 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07BBC04C1DC7A67900924C77 /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BBC04B1DC7A67900924C77 /* SwiftyTimer.swift */; };
 		07D69FBB1DAA4BE800BBEA05 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D69FBA1DAA4BE800BBEA05 /* API.swift */; };
 		07D69FC41DAA6E7200BBEA05 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FC31DAA6E7200BBEA05 /* Alamofire.framework */; };
 		07D69FC51DAA709C00BBEA05 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FC31DAA6E7200BBEA05 /* Alamofire.framework */; };
@@ -101,6 +106,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				077897A91DC640D1007B011A /* Popover.framework in Embed Frameworks */,
+				07BBC04A1DC76D5300924C77 /* Starscream.framework in Embed Frameworks */,
 				0767E9011DABB58A006691F4 /* FacebookShare.framework in Embed Frameworks */,
 				0767E8FB1DABB58A006691F4 /* Bolts.framework in Embed Frameworks */,
 				077897931DC5810E007B011A /* FaveButton.framework in Embed Frameworks */,
@@ -152,6 +158,9 @@
 		0778979F1DC5B084007B011A /* Spark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spark.swift; sourceTree = "<group>"; };
 		077897A41DC60202007B011A /* SwiftAvator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftAvator.swift; sourceTree = "<group>"; };
 		077897A61DC640C1007B011A /* Popover.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Popover.framework; path = ScribbleIt/Popover.framework; sourceTree = "<group>"; };
+		07BBC0451DC7665800924C77 /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
+		07BBC0471DC76D4B00924C77 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
+		07BBC04B1DC7A67900924C77 /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
 		07D69FBA1DAA4BE800BBEA05 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		07D69FC31DAA6E7200BBEA05 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ScribbleIt/Alamofire.framework; sourceTree = "<group>"; };
 		07D69FC81DAA70C900BBEA05 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
@@ -176,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				077897A81DC640D1007B011A /* Popover.framework in Frameworks */,
+				07BBC0491DC76D5300924C77 /* Starscream.framework in Frameworks */,
 				0767E9041DABB58A006691F4 /* FBSDKLoginKit.framework in Frameworks */,
 				07D69FE21DABB44C00BBEA05 /* FacebookShare.framework in Frameworks */,
 				07D69FDF1DABB44C00BBEA05 /* Bolts.framework in Frameworks */,
@@ -197,6 +207,7 @@
 				0767E9021DABB58A006691F4 /* FBSDKCoreKit.framework in Frameworks */,
 				077897911DC580EF007B011A /* FaveButton.framework in Frameworks */,
 				07D69FE31DABB44C00BBEA05 /* FBSDKCoreKit.framework in Frameworks */,
+				07BBC0481DC76D4B00924C77 /* Starscream.framework in Frameworks */,
 				0705899A1DAC005E00AE4F8D /* Simplicity.framework in Frameworks */,
 				07008D3F1DB1568500D8210B /* PopupDialog.framework in Frameworks */,
 				07D69FC91DAA70C900BBEA05 /* SwiftyJSON.framework in Frameworks */,
@@ -286,6 +297,7 @@
 				074543181DB235A800B397AA /* TemplateCollectionViewController.swift */,
 				07E207051DB1266A005FA4E8 /* TestViewController.swift */,
 				0745431C1DB239F200B397AA /* TemplateCollectionViewCell.swift */,
+				07BBC0451DC7665800924C77 /* LobbyViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -307,6 +319,7 @@
 				07736AEC1DAA005B002BA895 /* ColorSlider.swift */,
 				070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */,
 				07D69FBA1DAA4BE800BBEA05 /* API.swift */,
+				07BBC04B1DC7A67900924C77 /* SwiftyTimer.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -314,6 +327,7 @@
 		07D69FCD1DAA9A2500BBEA05 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				07BBC0471DC76D4B00924C77 /* Starscream.framework */,
 				077897A61DC640C1007B011A /* Popover.framework */,
 				077897901DC580EF007B011A /* FaveButton.framework */,
 				07008D3E1DB1568500D8210B /* PopupDialog.framework */,
@@ -476,8 +490,10 @@
 				07E207061DB1266A005FA4E8 /* TestViewController.swift in Sources */,
 				077897A01DC5B084007B011A /* FaveButton.swift in Sources */,
 				0778979B1DC5AF6E007B011A /* Init.swift in Sources */,
+				07BBC04C1DC7A67900924C77 /* SwiftyTimer.swift in Sources */,
 				077897A31DC5B084007B011A /* Spark.swift in Sources */,
 				07D69FD71DAAA27300BBEA05 /* LoginViewController.swift in Sources */,
+				07BBC0461DC7665800924C77 /* LobbyViewController.swift in Sources */,
 				077897981DC5AF6E007B011A /* Constraints+.swift in Sources */,
 				070076DC1D9E675B0017D22C /* SwiftColorPickerViewController.swift in Sources */,
 				07E207041DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift in Sources */,

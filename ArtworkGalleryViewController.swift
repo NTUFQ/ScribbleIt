@@ -21,6 +21,8 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
     var api = API()
     let cellIdentifier = "Cell"
     var textInput: UITextField? = nil
+    var textView:UITextView? = nil
+    var name = ""
     
     @IBAction func popoverShow(_ sender: AnyObject) {
         let startPoint = CGPoint(x: self.view.frame.width - 60, y: 55)
@@ -30,10 +32,10 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
             for comment in artwork.comment!{
                 text += comment.owner_name! + ": " + comment.text + "\n"
             }
-            var textView = UITextView(frame: CGRect(x: 10, y: 50, width: aView.frame.width - 100, height: 300))
-            textView.text = text
-            textView.font = UIFont(name: (textView.font?.fontName)!, size: 25)
-            aView.addSubview(textView)
+            textView = UITextView(frame: CGRect(x: 10, y: 50, width: aView.frame.width - 100, height: 300))
+            textView?.text = text
+            textView?.font = UIFont(name: "HelveticaNeue", size: 25)
+            aView.addSubview(textView!)
         }
         textInput = UITextField(frame: CGRect(x: 0, y: 300, width: aView.frame.width - 200, height: 50))
         if textInput != nil {
@@ -57,10 +59,7 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
                 print(textInput!.text!)
                 print(FBSDKAccessToken.current().userID)
                 print(artworks![sender.tag].pk)
-//                API().postComment(commentText: "test2222", ownerId: "2113430318882027", artworkId: 6){
-//                    result in
-//                    print(result)
-//                }
+                textView?.text! += self.name + ": " + textInput!.text! + "\n"
                 API().postComment(commentText: textInput!.text!, ownerId: FBSDKAccessToken.current().userID, artworkId: artworks![sender.tag].pk){
                     result in
                     if result{
@@ -112,6 +111,7 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
             (user: UserInfo?) in
             if user != nil {
                 self.artworks = user!.artwork
+                self.name = (user!.artwork?.last?.owner_name)!
                 self.artworkTableView.reloadData()
             }
 

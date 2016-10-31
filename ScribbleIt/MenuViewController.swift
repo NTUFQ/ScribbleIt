@@ -29,6 +29,7 @@ class MenuViewController: UIViewController, StoreStateDelegate{
     var storedUndoStack: [UIImage?] = []
     var storedTemplate: Template?
     
+    var id:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,7 @@ class MenuViewController: UIViewController, StoreStateDelegate{
         self.navigationController?.navigationBar.isHidden = true
         
         if FBSDKAccessToken.current() != nil{
+            self.id = FBSDKAccessToken.current().userID
             print(FBSDKAccessToken.current())
             
             // request for basic info
@@ -109,6 +111,15 @@ class MenuViewController: UIViewController, StoreStateDelegate{
                 continueDrawingViewController.current = self.storedImage
                 continueDrawingViewController.imageList = self.storedStack
                 continueDrawingViewController.template = self.storedTemplate
+            case "MenuToLobby":
+                let lobbyViewController = segue.destination as! LobbyViewController
+                if self.id != nil {
+                    lobbyViewController.id = self.id!
+                    print(self.nameLabel.text!)
+                    lobbyViewController.name = self.nameLabel.text!
+//                    lobbyViewController.userName1.text = self.nameLabel.text
+                    lobbyViewController.image = self.pofileImage.image!
+                }
             default:
                 break
             }

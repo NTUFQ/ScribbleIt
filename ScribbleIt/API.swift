@@ -254,6 +254,21 @@ class API{
         }
     }
     
+    func postPicture(picture: UIImage?, completeHandler: @escaping (_ url: String) -> ()) {
+        let imageData = UIImageJPEGRepresentation(picture!, 0.5)
+        Alamofire.upload(imageData!, to: URL + "/api/picture/").validate().responseJSON{
+            response in
+            switch response.result{
+            case .success:
+                let json = JSON(response.data)
+                completeHandler(json["picture"].stringValue)
+                break
+            case .failure(let error):
+                print(error)
+                break
+            }
+        }
+    }
     
     func postArtwork(name: String?, picture: UIImage?, owner: String?, template: Int?, completeHandler: @escaping (_ result: Bool) -> ()) {
         var parameter = [

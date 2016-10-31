@@ -281,6 +281,74 @@
             </objects>
             <point key="canvasLocation" x="1970" y="1618"/>
         </scene>
+        <!--Lobby View Controller-->
+        <scene sceneID="xTr-v6-Swb">
+            <objects>
+                <viewController id="d9h-jz-gk0" customClass="LobbyViewController" customModule="ScribbleIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kD2-4S-sD0">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="MfJ-jR-54n" customClass="SwiftyAvatar" customModule="ScribbleIt" customModuleProvider="target">
+                                <frame key="frameInset" minX="178" minY="284" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="db8-Q9-4CT" customClass="SwiftyAvatar" customModule="ScribbleIt" customModuleProvider="target">
+                                <frame key="frameInset" minX="661" minY="284" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="USER NAME 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dzQ-Yf-bIB">
+                                <frame key="frameInset" minX="224" minY="526" width="108" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="USER NAME 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oZj-eN-hxe">
+                                <frame key="frameInset" minX="707" minY="526" width="110" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cbV-N5-yxs"/>
+                    <connections>
+                        <outlet property="userImage1" destination="MfJ-jR-54n" id="zL3-23-h4V"/>
+                        <outlet property="userImage2" destination="db8-Q9-4CT" id="8Ma-3G-QyR"/>
+                        <outlet property="userName1" destination="dzQ-Yf-bIB" id="TRZ-rt-DUQ"/>
+                        <outlet property="userName2" destination="oZj-eN-hxe" id="dJ9-QB-YfH"/>
+                        <segue destination="BYZ-38-t0r" kind="push" identifier="LobbyToDrawing" id="kH1-KA-2WR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6CM-rU-iwR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1592" y="3011"/>
+        </scene>
         <!--Template Collection View Controller-->
         <scene sceneID="Dzf-Zj-7tc">
             <objects>
@@ -452,7 +520,7 @@
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="COLLABORATION MODE"/>
                                 <connections>
-                                    <segue destination="p3h-dl-1JH" kind="push" id="IvL-i0-kEq"/>
+                                    <segue destination="d9h-jz-gk0" kind="push" identifier="MenuToLobby" id="unt-bj-SYv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2w1-uX-UXJ">
@@ -503,32 +571,6 @@
                 <exit id="gEA-3P-iIb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="832" y="1618"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="5HC-qB-8nq">
-            <objects>
-                <viewController id="p3h-dl-1JH" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="d25-R5-oU4">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HGF-UC-c0m">
-                                <frame key="frameInset" minX="84" minY="97" width="166" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="COLLABORATION BACK"/>
-                                <connections>
-                                    <segue destination="yiN-EG-oTl" kind="unwind" unwindAction="backToMenu:" id="amg-lt-dRl"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.99953884548611116" green="0.91248914930555558" blue="0.844970703125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="n4z-Jz-UGQ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NtX-Ay-npw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="yiN-EG-oTl" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1423" y="2964"/>
         </scene>
         <!--Artwork Gallery View Controller-->
         <scene sceneID="McP-Lx-bns">
@@ -673,7 +715,7 @@
                                 <frame key="frameInset" minX="55" minY="371" width="240" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -757,6 +799,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ueK-E2-x2N"/>
+        <segue reference="kH1-KA-2WR"/>
     </inferredMetricsTieBreakers>
 </document>

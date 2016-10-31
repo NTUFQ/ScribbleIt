@@ -9,6 +9,8 @@
 import UIKit
 import FBSDKCoreKit
 import PopupDialog
+import Starscream
+import SwiftyJSON
 
 protocol StoreStateDelegate {
     func storeState(current: UIImage?, stack: [UIImage?], undoStack: [UIImage?], template: Template?)
@@ -28,9 +30,16 @@ class DrawingViewController: UIViewController, SelectTemplateDelegate {
     @IBOutlet weak var redoButton: UIButton!
     @IBOutlet weak var templateButton: UIButton!
     @IBOutlet weak var colorBox: UIView!
-    
     @IBOutlet weak var templateView: UIImageView!
     
+    var collaborationMode = false
+    var id = ""
+    var name = ""
+    var player2id:String = ""
+    var player2name:String = ""
+    var turn = 0
+    var currentTurn = 0
+    var finish = false
     
     func selectTemplate(template: Template?) {
         self.template = template
@@ -227,6 +236,68 @@ class DrawingViewController: UIViewController, SelectTemplateDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
+        if collaborationMode == true {
+            let socket = WebSocket(url: URL(string: "ws://128.199.250.111:3002/comode")!)
+            socket.onConnect = {
+                socket.write(string:"user connect successfully")
+            }
+            socket.onDisconnect = {
+                error in
+                print(error)
+                print("disconnected from lobby")
+            }
+            socket.onText = {
+                text in
+                print(text)
+                let json = JSON.parse(text)
+                self.currentTurn = json["turn"].intValue
+                if json["type"].stringValue ==  "turn" && json["turn"].intValue != self.turn{
+                    API().postPicture(picture: self.imageView.image){
+                        imageUrl in
+                        socket.write(string: JSON(["type":"sync", "turn":self.turn, "picture":imageUrl]).rawString()!)
+                }
+                
+                if (json["type"].stringValue == "sync") && (json["turn"].intValue != self.turn){
+                    let imageUrl = json["picture"].stringValue
+                    self.imageView.imageFromUrl(urlString: imageUrl)
+                }
+            }
+            // the person with turn = 0 will be the timer for turn switching
+            if self.turn == 0{
+                var turnStr = ""
+                if self.currentTurn == 0{
+                    turnStr = JSON(["type":"turn", "turn":1]).rawString()!
+                    self.currentTurn = 1
+                }
+                else{
+                    turnStr = JSON(["type":"turn", "turn":0]).rawString()!
+                    self.currentTurn = 0
+                }
+                let turnTimer = Timer.new(every: 1.minute){
+                    (timer: Timer) in
+                    if self.finish{
+                        timer.invalidate()
+                    }
+                    socket.write(string: turnStr)
+                }
+                turnTimer.start()
+            }
+            
+            let timer = Timer.new(every: 15.seconds){
+                (timer: Timer) in
+                if self.finish{
+                    timer.invalidate()
+                }
+                if self.turn == self.currentTurn{
+                    API().postPicture(picture: self.imageView.image){
+                        imageUrl in
+                        socket.write(string: JSON(["type":"sync", "turn":self.turn, "picture":imageUrl]).rawString()!)
+                    }
+                }
+            }
+            timer.start()
+            }
+        }
         
         // Do any additional setup after loading the view, typically from a nib.
         red = (0.0/255.0)
@@ -296,10 +367,12 @@ class DrawingViewController: UIViewController, SelectTemplateDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if turn == currentTurn {
         isSwiping = false
         if let touch = touches.first{
             lastPoint = touch.location(in: imageView)
             
+        }
         }
 //        if tool == 3 { //text tool
 //            if let touch = touches.first {
@@ -325,6 +398,7 @@ class DrawingViewController: UIViewController, SelectTemplateDelegate {
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if turn == currentTurn {
         isSwiping = true
         if tool == 0 {
             if let touch = touches.first {
@@ -353,9 +427,11 @@ class DrawingViewController: UIViewController, SelectTemplateDelegate {
                 }
             }
         }
+        }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if turn == currentTurn {
         if tool == 0 {
             if(!isSwiping){
                 UIGraphicsBeginImageContext(self.imageView.frame.size)
@@ -408,6 +484,7 @@ class DrawingViewController: UIViewController, SelectTemplateDelegate {
         
         self.tempImageView.image = nil
         self.tempImageView.layer.sublayers = nil
+        }
     }
     
     
@@ -476,4 +553,3 @@ class DrawingViewController: UIViewController, SelectTemplateDelegate {
         }
     }
 }
-
