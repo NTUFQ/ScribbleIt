@@ -202,8 +202,8 @@ class DrawingViewController: UIViewController, SelectTemplateDelegate {
         (1.0, 0, 0),//red
         (0, 0, 1.0),//blue
         (1.0, 1.0, 1.0),//eraser
-        (1.0, 1.0, 0.0), //yellow
-        (0.0, 1.0, 0.0), //green
+        (1.0, 1.0, 0), //yellow
+        (0.0, 1.0, 0), //green
         (102.0 / 255.0, 204.0 / 255.0, 0),
         (102.0 / 255.0, 1.0, 0),
         (160.0 / 255.0, 82.0 / 255.0, 45.0 / 255.0),

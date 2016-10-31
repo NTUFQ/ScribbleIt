@@ -231,7 +231,7 @@
                                             <action selector="chooseColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GUv-Fo-igz"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pLn-2g-adP">
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pLn-2g-adP">
                                         <frame key="frameInset" minX="360" minY="29" width="40" height="161"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="pencil_green"/>
