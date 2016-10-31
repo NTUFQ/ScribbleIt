@@ -20,6 +20,13 @@ protocol RestoreStateDelegate {
 class MenuViewController: UIViewController, StoreStateDelegate{
     
 
+
+    @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var collaborationModeButton: UIButton!
+    @IBOutlet weak var galleryButton: UIButton!
+    @IBOutlet weak var daillyChallengeButton: UIButton!
+    @IBOutlet weak var lockView: UIView!
+
     @IBOutlet weak var pofileImage: SwiftyAvatar!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var continueDrawingButton: UIButton!
@@ -38,6 +45,7 @@ class MenuViewController: UIViewController, StoreStateDelegate{
         self.navigationController?.navigationBar.isHidden = true
         
         if FBSDKAccessToken.current() != nil{
+            lockView.isHidden = true
             self.id = FBSDKAccessToken.current().userID
             print(FBSDKAccessToken.current())
             
@@ -84,6 +92,11 @@ class MenuViewController: UIViewController, StoreStateDelegate{
                     self.pofileImage.imageFromUrl(urlString: url)
                 }
             }
+        }
+        else{
+            daillyChallengeButton.isEnabled = false
+            collaborationModeButton.isEnabled = false
+            galleryButton.isEnabled = false
         }
     }
     

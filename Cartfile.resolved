@@ -1,5 +1,6 @@
 github "Alamofire/Alamofire" "4.0.1"
 github "BoltsFramework/Bolts-ObjC" "1.8.4"
+github "ninjaprox/NVActivityIndicatorView" "v3.0"
 github "corin8823/Popover" "1.0.1"
 github "Orderella/PopupDialog" "0.5.0"
 github "SimplicityMobile/Simplicity" "2.0.1"

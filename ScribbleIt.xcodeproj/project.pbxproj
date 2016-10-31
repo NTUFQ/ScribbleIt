@@ -11,8 +11,6 @@
 		070076B01D9E36C80017D22C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070076AF1D9E36C80017D22C /* ViewController.swift */; };
 		070076B51D9E36C80017D22C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 070076B41D9E36C80017D22C /* Assets.xcassets */; };
 		070076B81D9E36C80017D22C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070076B61D9E36C80017D22C /* LaunchScreen.storyboard */; };
-		070076C31D9E36C80017D22C /* ScribbleItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070076C21D9E36C80017D22C /* ScribbleItTests.swift */; };
-		070076CE1D9E36C80017D22C /* ScribbleItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070076CD1D9E36C80017D22C /* ScribbleItUITests.swift */; };
 		070076DC1D9E675B0017D22C /* SwiftColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */; };
 		07008D3D1DB155D800D8210B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07008D3B1DB155D800D8210B /* Main.storyboard */; };
 		07008D3F1DB1568500D8210B /* PopupDialog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07008D3E1DB1568500D8210B /* PopupDialog.framework */; };
@@ -59,6 +57,10 @@
 		07BBC0491DC76D5300924C77 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BBC0471DC76D4B00924C77 /* Starscream.framework */; };
 		07BBC04A1DC76D5300924C77 /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07BBC0471DC76D4B00924C77 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07BBC04C1DC7A67900924C77 /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BBC04B1DC7A67900924C77 /* SwiftyTimer.swift */; };
+		07BBC04E1DC7BC5500924C77 /* KBZipaDeeDooDah.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BBC04D1DC7BC5500924C77 /* KBZipaDeeDooDah.ttf */; };
+		07BBC0501DC7C59500924C77 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BBC04F1DC7C59500924C77 /* NVActivityIndicatorView.framework */; };
+		07BBC0511DC7C5A300924C77 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BBC04F1DC7C59500924C77 /* NVActivityIndicatorView.framework */; };
+		07BBC0521DC7C5A300924C77 /* NVActivityIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07BBC04F1DC7C59500924C77 /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07D69FBB1DAA4BE800BBEA05 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D69FBA1DAA4BE800BBEA05 /* API.swift */; };
 		07D69FC41DAA6E7200BBEA05 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FC31DAA6E7200BBEA05 /* Alamofire.framework */; };
 		07D69FC51DAA709C00BBEA05 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FC31DAA6E7200BBEA05 /* Alamofire.framework */; };
@@ -119,6 +121,7 @@
 				0767E8FF1DABB58A006691F4 /* FacebookLogin.framework in Embed Frameworks */,
 				0767E9051DABB58A006691F4 /* FBSDKLoginKit.framework in Embed Frameworks */,
 				07D69FC61DAA709C00BBEA05 /* Alamofire.framework in Embed Frameworks */,
+				07BBC0521DC7C5A300924C77 /* NVActivityIndicatorView.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,11 +136,7 @@
 		070076B71D9E36C80017D22C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		070076B91D9E36C80017D22C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		070076BE1D9E36C80017D22C /* ScribbleItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScribbleItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		070076C21D9E36C80017D22C /* ScribbleItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScribbleItTests.swift; sourceTree = "<group>"; };
-		070076C41D9E36C80017D22C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		070076C91D9E36C80017D22C /* ScribbleItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScribbleItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		070076CD1D9E36C80017D22C /* ScribbleItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScribbleItUITests.swift; sourceTree = "<group>"; };
-		070076CF1D9E36C80017D22C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColorPickerViewController.swift; sourceTree = "<group>"; };
 		07008D3C1DB155D800D8210B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07008D3E1DB1568500D8210B /* PopupDialog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PopupDialog.framework; path = Carthage/Build/iOS/PopupDialog.framework; sourceTree = "<group>"; };
@@ -161,6 +160,8 @@
 		07BBC0451DC7665800924C77 /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
 		07BBC0471DC76D4B00924C77 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		07BBC04B1DC7A67900924C77 /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
+		07BBC04D1DC7BC5500924C77 /* KBZipaDeeDooDah.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KBZipaDeeDooDah.ttf; sourceTree = "<group>"; };
+		07BBC04F1DC7C59500924C77 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
 		07D69FBA1DAA4BE800BBEA05 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		07D69FC31DAA6E7200BBEA05 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ScribbleIt/Alamofire.framework; sourceTree = "<group>"; };
 		07D69FC81DAA70C900BBEA05 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
@@ -184,6 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07BBC0501DC7C59500924C77 /* NVActivityIndicatorView.framework in Frameworks */,
 				077897A81DC640D1007B011A /* Popover.framework in Frameworks */,
 				07BBC0491DC76D5300924C77 /* Starscream.framework in Frameworks */,
 				0767E9041DABB58A006691F4 /* FBSDKLoginKit.framework in Frameworks */,
@@ -197,6 +199,7 @@
 				07D69FCA1DAA70D200BBEA05 /* SwiftyJSON.framework in Frameworks */,
 				0767E8FC1DABB58A006691F4 /* FacebookCore.framework in Frameworks */,
 				07D69FC41DAA6E7200BBEA05 /* Alamofire.framework in Frameworks */,
+				07BBC0511DC7C5A300924C77 /* NVActivityIndicatorView.framework in Frameworks */,
 				07D69FE11DABB44C00BBEA05 /* FacebookLogin.framework in Frameworks */,
 				07D69FE51DABB44C00BBEA05 /* FBSDKShareKit.framework in Frameworks */,
 				07D69FE01DABB44C00BBEA05 /* FacebookCore.framework in Frameworks */,
@@ -236,8 +239,6 @@
 			isa = PBXGroup;
 			children = (
 				070076AC1D9E36C80017D22C /* ScribbleIt */,
-				070076C11D9E36C80017D22C /* ScribbleItTests */,
-				070076CC1D9E36C80017D22C /* ScribbleItUITests */,
 				070076AB1D9E36C80017D22C /* Products */,
 				07D69FCD1DAA9A2500BBEA05 /* Framework */,
 			);
@@ -266,24 +267,6 @@
 				070076B91D9E36C80017D22C /* Info.plist */,
 			);
 			path = ScribbleIt;
-			sourceTree = "<group>";
-		};
-		070076C11D9E36C80017D22C /* ScribbleItTests */ = {
-			isa = PBXGroup;
-			children = (
-				070076C21D9E36C80017D22C /* ScribbleItTests.swift */,
-				070076C41D9E36C80017D22C /* Info.plist */,
-			);
-			path = ScribbleItTests;
-			sourceTree = "<group>";
-		};
-		070076CC1D9E36C80017D22C /* ScribbleItUITests */ = {
-			isa = PBXGroup;
-			children = (
-				070076CD1D9E36C80017D22C /* ScribbleItUITests.swift */,
-				070076CF1D9E36C80017D22C /* Info.plist */,
-			);
-			path = ScribbleItUITests;
 			sourceTree = "<group>";
 		};
 		0745431A1DB235B200B397AA /* ViewControllers */ = {
@@ -320,6 +303,7 @@
 				070076DB1D9E675B0017D22C /* SwiftColorPickerViewController.swift */,
 				07D69FBA1DAA4BE800BBEA05 /* API.swift */,
 				07BBC04B1DC7A67900924C77 /* SwiftyTimer.swift */,
+				07BBC04D1DC7BC5500924C77 /* KBZipaDeeDooDah.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -327,6 +311,7 @@
 		07D69FCD1DAA9A2500BBEA05 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				07BBC04F1DC7C59500924C77 /* NVActivityIndicatorView.framework */,
 				07BBC0471DC76D4B00924C77 /* Starscream.framework */,
 				077897A61DC640C1007B011A /* Popover.framework */,
 				077897901DC580EF007B011A /* FaveButton.framework */,
@@ -461,6 +446,7 @@
 			files = (
 				2147EA071DC36ADE00F59007 /* sketch_gothic_light.otf in Resources */,
 				07008D3D1DB155D800D8210B /* Main.storyboard in Resources */,
+				07BBC04E1DC7BC5500924C77 /* KBZipaDeeDooDah.ttf in Resources */,
 				070076B81D9E36C80017D22C /* LaunchScreen.storyboard in Resources */,
 				070076B51D9E36C80017D22C /* Assets.xcassets in Resources */,
 			);
@@ -518,7 +504,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				070076C31D9E36C80017D22C /* ScribbleItTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,7 +511,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				070076CE1D9E36C80017D22C /* ScribbleItUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
