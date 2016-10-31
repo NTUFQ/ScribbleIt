@@ -34,16 +34,18 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
             }
             textView = UITextView(frame: CGRect(x: 10, y: 50, width: aView.frame.width - 100, height: 300))
             textView?.text = text
-            textView?.font = UIFont(name: "HelveticaNeue", size: 25)
+            textView?.font = UIFont(name: "HelveticaNeue", size: 18)
             aView.addSubview(textView!)
         }
-        textInput = UITextField(frame: CGRect(x: 0, y: 300, width: aView.frame.width - 200, height: 50))
+        textInput = UITextField(frame: CGRect(x: 0, y: 300, width: aView.frame.width - 230, height: 50))
         if textInput != nil {
             textInput!.backgroundColor = UIColor.lightGray
         }
-        let postButton = UIButton(frame: CGRect(x: textInput!.frame.maxX, y: 300, width: 80, height: 50))
-        postButton.backgroundColor = UIColor.red
-        postButton.setTitle("Post", for: .normal)
+        let postButton = UIButton(frame: CGRect(x: textInput!.frame.maxX + 20, y: 300, width: 80, height: 50))
+        //postButton.backgroundColor = UIColor.red
+        postButton.setTitle("POST", for: .normal)
+        postButton.setTitleColor(UIColor.red, for: .normal)
+        postButton.titleLabel!.font = UIFont(name: "KBZipaDeeDooDah", size: 30)
         postButton.tag = sender.tag
         postButton.addTarget(self, action: #selector(postComment(_:)), for: .touchUpInside)
         aView.addSubview(textInput!)
@@ -72,13 +74,21 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     @IBAction func deleteArtwork(_ sender: AnyObject) {
-        api.deleteArtwork(pk: (artworks?[sender.tag].pk)!){
-            result in
-            if result == true{
-                self.artworks?.remove(at: sender.tag)
-                self.artworkTableView.reloadData()
+        let popup = PopupDialog(title: "Do you want to delete this artwork?", message: nil)
+        let button1 = DefaultButton(title: "Delete") {
+            self.api.deleteArtwork(pk: (self.artworks?[sender.tag].pk)!){
+                result in
+                if result == true{
+                    self.artworks?.remove(at: sender.tag)
+                    self.artworkTableView.reloadData()
+                    self.present(PopupDialog(title: "Delete successfully!", message: nil), animated: true, completion: nil)
+                }
             }
         }
+        let button2 = CancelButton(title: "Cancel"){
+        }
+        popup.addButtons([button1, button2])
+        self.present(popup, animated: true, completion: nil)
     }
     
     

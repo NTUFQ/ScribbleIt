@@ -253,10 +253,14 @@ class DrawingViewController: UIViewController, SelectTemplateDelegate {
                 print(text)
                 let json = JSON.parse(text)
                 self.currentTurn = json["turn"].intValue
+                if json["type"].stringValue ==  "turn" && json["turn"].intValue == self.turn{
+                    self.present(PopupDialog(title: "It's your turn now, start drawing!", message: nil), animated: true, completion: nil)
+                }
                 if json["type"].stringValue ==  "turn" && json["turn"].intValue != self.turn{
                     API().postPicture(picture: self.imageView.image){
                         imageUrl in
                         socket.write(string: JSON(["type":"sync", "turn":self.turn, "picture":imageUrl]).rawString()!)
+                        self.present(PopupDialog(title: "Your turn is over, let's watching him drawing!", message: nil), animated: true, completion: nil)
                 }
                 
                 if (json["type"].stringValue == "sync") && (json["turn"].intValue != self.turn){
