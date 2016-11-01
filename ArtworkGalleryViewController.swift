@@ -12,10 +12,13 @@ import SwiftyJSON
 import FaveButton
 import Popover
 import PopupDialog
+import NVActivityIndicatorView
 class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var artworkTableView: UITableView!
     
+    @IBOutlet weak var myGalleryIndicator: UIView!
+    @IBOutlet weak var discoverIndicator: UIView!
     
     var artworks: [Artwork]? = nil
     var api = API()
@@ -94,6 +97,20 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //animation
+        let frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        let myGalleryLoading = NVActivityIndicatorView(frame: frame, type: NVActivityIndicatorType.ballScaleMultiple, color: UIColor
+            .white, padding: 0)
+        myGalleryLoading.startAnimating()
+        let discoverLoading = NVActivityIndicatorView(frame: frame, type: NVActivityIndicatorType.ballScaleMultiple, color: UIColor
+            .white, padding: 0)
+        discoverLoading.startAnimating()
+        self.myGalleryIndicator.addSubview(myGalleryLoading)
+        myGalleryIndicator.isHidden = false
+        self.discoverIndicator.addSubview(discoverLoading)
+        discoverIndicator.isHidden = true
+        
         if FBSDKAccessToken.current() != nil{
             print("user found!")
             loadArtworks(ownerId: FBSDKAccessToken.current().userID)
@@ -107,6 +124,8 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
     
     @IBAction func loadMyGallery(_ sender: AnyObject) {
         loadArtworks(ownerId: FBSDKAccessToken.current().userID)
+        myGalleryIndicator.isHidden = false
+        discoverIndicator.isHidden = true
     }
     @IBAction func loadDiscover(_ sender: AnyObject) {
         api.getDiscover{
@@ -128,6 +147,8 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
             self.artworks = artwork_list?.reversed()
             self.artworkTableView.reloadData()
         }
+        myGalleryIndicator.isHidden = true
+        discoverIndicator.isHidden = false
     }
     
     func loadArtworks(ownerId: String){

@@ -1,5 +1,6 @@
 github "Alamofire/Alamofire" "4.0.1"
 github "BoltsFramework/Bolts-ObjC" "1.8.4"
+github "yoavlt/LiquidLoader" "1.2.1"
 github "ninjaprox/NVActivityIndicatorView" "v3.0"
 github "corin8823/Popover" "1.0.1"
 github "Orderella/PopupDialog" "0.5.0"

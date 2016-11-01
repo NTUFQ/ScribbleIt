@@ -1,0 +1,16 @@
+PODS:
+  - LiquidLoader (0.1.1)
+
+DEPENDENCIES:
+  - LiquidLoader (from `../`)
+
+EXTERNAL SOURCES:
+  LiquidLoader:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LiquidLoader: cf49954a6643f610c06a7db45da2da81a68a154b
+
+PODFILE CHECKSUM: 45161a1a5c5a941a9031074d8a3962f9f4583638
+
+COCOAPODS: 1.0.1

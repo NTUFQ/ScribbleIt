@@ -398,11 +398,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" misplaced="YES" id="Sed-j1-jwb">
+                                <frame key="frameInset" minX="490" minY="354" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.77588391304016113" green="0.92577725648880005" blue="0.9432024359703064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="cbV-N5-yxs"/>
                     <connections>
+                        <outlet property="loadingView" destination="Sed-j1-jwb" id="wJF-uO-ZZ3"/>
                         <outlet property="userImage1" destination="MfJ-jR-54n" id="zL3-23-h4V"/>
                         <outlet property="userImage2" destination="db8-Q9-4CT" id="8Ma-3G-QyR"/>
                         <outlet property="userName1" destination="dzQ-Yf-bIB" id="TRZ-rt-DUQ"/>
@@ -466,6 +471,10 @@
                                     <segue destination="BYZ-38-t0r" kind="push" identifier="ChallengeToDrawing" id="wN9-9S-hmF"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="eraser_1" id="w5e-ZJ-HbR">
+                                <frame key="frameInset" minX="758" minY="412" width="221" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.91249793767929077" green="0.96653598546981812" blue="0.87108737230300903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -557,6 +566,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="eraser_1" id="9qz-Nj-AGT">
+                                <frame key="frameInset" minX="733" minY="206" width="311" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="shapes_1" id="crV-bB-rnt">
+                                <frame key="frameInset" minX="-101" minY="223" width="295" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="e60-BE-J15">
                                 <frame key="frameInset" minX="261" minY="526" width="502" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -568,7 +585,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BTK-Ay-ym0">
-                                <frame key="frameInset" minX="25.39%" minY="52.87%" width="49.17%" height="10.42%"/>
+                                <frame key="frameInset" minX="25.34%" minY="52.87%" width="49.22%" height="10.42%"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.50690239667892456" green="0.65923464298248291" blue="0.99946004152297974" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="KBZipaDeeDooDah" family="KBZipaDeeDooDah" pointSize="45"/>
@@ -591,6 +608,10 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pencils" id="Am1-j1-4Qf">
+                                <frame key="frameInset" minX="168" minY="567" width="295" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.97032243009999997" blue="0.8615779281" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="1" green="0.97032243013381958" blue="0.86157792806625366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -859,9 +880,9 @@
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="OWNER NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xJG-LV-tdC">
-                                                            <frame key="frameInset" minX="71" minY="18" width="262" height="21"/>
+                                                            <frame key="frameInset" minX="71" minY="17" width="291" height="29"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -891,7 +912,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vmI-cE-s26">
-                                <frame key="frameInset" minX="59" minY="398" width="176" height="71"/>
+                                <frame key="frameInset" minX="103" minY="398" width="176" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="KBZipaDeeDooDah" family="KBZipaDeeDooDah" pointSize="29"/>
                                 <state key="normal" title="DISCOVER"/>
@@ -900,7 +921,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2PW-ri-Nap">
-                                <frame key="frameInset" minX="42" minY="313" width="211" height="30"/>
+                                <frame key="frameInset" minX="86" minY="315" width="211" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="KBZipaDeeDooDah" family="KBZipaDeeDooDah" pointSize="29"/>
                                 <state key="normal" title="MY GALLERY"/>
@@ -917,12 +938,22 @@
                                     <segue destination="QCg-Nz-95H" kind="unwind" unwindAction="backToMenu:" id="d2X-qy-RLL"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" misplaced="YES" id="X0l-2t-IqS">
+                                <frame key="frameInset" minX="44" minY="305" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" id="nFM-it-qad">
+                                <frame key="frameInset" minX="45" minY="408" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.84290907118055558" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="0pr-rT-SgX"/>
                     <connections>
                         <outlet property="artworkTableView" destination="SZX-nr-oef" id="0E2-MY-VTh"/>
+                        <outlet property="discoverIndicator" destination="nFM-it-qad" id="p9e-Nk-dKA"/>
+                        <outlet property="myGalleryIndicator" destination="X0l-2t-IqS" id="Ltc-K6-AA8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ie-QW-ACt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -976,13 +1007,16 @@
         <image name="comment" width="1024" height="1024"/>
         <image name="doggy" width="941" height="450"/>
         <image name="eraser" width="202" height="308"/>
+        <image name="eraser_1" width="332" height="364"/>
         <image name="lock" width="512" height="512"/>
         <image name="pencil_black" width="102" height="411"/>
         <image name="pencil_blue" width="102" height="411"/>
         <image name="pencil_green" width="102" height="411"/>
         <image name="pencil_red" width="102" height="411"/>
         <image name="pencil_yellow" width="102" height="411"/>
+        <image name="pencils" width="1714" height="2016"/>
         <image name="shapes" width="700" height="442"/>
+        <image name="shapes_1" width="444" height="702"/>
         <image name="user_profile" width="512" height="512"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -991,6 +1025,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="kH1-KA-2WR"/>
+        <segue reference="wN9-9S-hmF"/>
     </inferredMetricsTieBreakers>
 </document>
