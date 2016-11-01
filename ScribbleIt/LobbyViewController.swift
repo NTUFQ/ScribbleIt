@@ -25,6 +25,9 @@ class LobbyViewController: UIViewController {
     var player2id:String = ""
     var player2name:String = ""
     
+    func toDrawing(){
+        self.performSegue(withIdentifier: "LobbyToDrawing", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
@@ -59,7 +62,7 @@ class LobbyViewController: UIViewController {
                 self.userName2.text = self.player2name
                 socket.write(string: myData!)
                 socket.disconnect()
-                self.performSegue(withIdentifier: "LobbyToDrawing", sender: self)
+                self.toDrawing()
             }
 //            if json["type"] == "start" && (json["user_id"].stringValue != self.id) {
 //                
