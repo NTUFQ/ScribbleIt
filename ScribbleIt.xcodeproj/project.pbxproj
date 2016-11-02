@@ -24,12 +24,6 @@
 		074F979C1DAC105C0081BA56 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074F979B1DAC105C0081BA56 /* MenuViewController.swift */; };
 		0767E8FA1DABB58A006691F4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FD81DABB44B00BBEA05 /* Bolts.framework */; };
 		0767E8FB1DABB58A006691F4 /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FD81DABB44B00BBEA05 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0767E8FC1DABB58A006691F4 /* FacebookCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FD91DABB44C00BBEA05 /* FacebookCore.framework */; };
-		0767E8FD1DABB58A006691F4 /* FacebookCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FD91DABB44C00BBEA05 /* FacebookCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0767E8FE1DABB58A006691F4 /* FacebookLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FDA1DABB44C00BBEA05 /* FacebookLogin.framework */; };
-		0767E8FF1DABB58A006691F4 /* FacebookLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FDA1DABB44C00BBEA05 /* FacebookLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0767E9001DABB58A006691F4 /* FacebookShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FDB1DABB44C00BBEA05 /* FacebookShare.framework */; };
-		0767E9011DABB58A006691F4 /* FacebookShare.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FDB1DABB44C00BBEA05 /* FacebookShare.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0767E9021DABB58A006691F4 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FDC1DABB44C00BBEA05 /* FBSDKCoreKit.framework */; };
 		0767E9031DABB58A006691F4 /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FDC1DABB44C00BBEA05 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0767E9041DABB58A006691F4 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FDD1DABB44C00BBEA05 /* FBSDKLoginKit.framework */; };
@@ -52,6 +46,7 @@
 		077897A71DC640C1007B011A /* Popover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077897A61DC640C1007B011A /* Popover.framework */; };
 		077897A81DC640D1007B011A /* Popover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077897A61DC640C1007B011A /* Popover.framework */; };
 		077897A91DC640D1007B011A /* Popover.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 077897A61DC640C1007B011A /* Popover.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		077A64371DC9E8F200702000 /* ArtworkGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A64361DC9E8F200702000 /* ArtworkGalleryViewController.swift */; };
 		07887DCE1DC7DC4700F98D20 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07887DCD1DC7DC4700F98D20 /* ChallengeViewController.swift */; };
 		07BBC0461DC7665800924C77 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BBC0451DC7665800924C77 /* LobbyViewController.swift */; };
 		07BBC0481DC76D4B00924C77 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BBC0471DC76D4B00924C77 /* Starscream.framework */; };
@@ -71,14 +66,10 @@
 		07D69FCB1DAA70D200BBEA05 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FC81DAA70C900BBEA05 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07D69FD71DAAA27300BBEA05 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D69FD61DAAA27300BBEA05 /* LoginViewController.swift */; };
 		07D69FDF1DABB44C00BBEA05 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FD81DABB44B00BBEA05 /* Bolts.framework */; };
-		07D69FE01DABB44C00BBEA05 /* FacebookCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FD91DABB44C00BBEA05 /* FacebookCore.framework */; };
-		07D69FE11DABB44C00BBEA05 /* FacebookLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FDA1DABB44C00BBEA05 /* FacebookLogin.framework */; };
-		07D69FE21DABB44C00BBEA05 /* FacebookShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FDB1DABB44C00BBEA05 /* FacebookShare.framework */; };
 		07D69FE31DABB44C00BBEA05 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FDC1DABB44C00BBEA05 /* FBSDKCoreKit.framework */; };
 		07D69FE41DABB44C00BBEA05 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FDD1DABB44C00BBEA05 /* FBSDKLoginKit.framework */; };
 		07D69FE51DABB44C00BBEA05 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D69FDE1DABB44C00BBEA05 /* FBSDKShareKit.framework */; };
 		07E207021DB10CE3005FA4E8 /* ArtworkGalleryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E207011DB10CE3005FA4E8 /* ArtworkGalleryCellTableViewCell.swift */; };
-		07E207041DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E207031DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift */; };
 		07E207061DB1266A005FA4E8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E207051DB1266A005FA4E8 /* TestViewController.swift */; };
 		07E207081DB13DCE005FA4E8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E207071DB13DCE005FA4E8 /* CardView.swift */; };
 		2147EA071DC36ADE00F59007 /* sketch_gothic_light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2147EA061DC36ADD00F59007 /* sketch_gothic_light.otf */; };
@@ -110,16 +101,13 @@
 			files = (
 				077897A91DC640D1007B011A /* Popover.framework in Embed Frameworks */,
 				07BBC04A1DC76D5300924C77 /* Starscream.framework in Embed Frameworks */,
-				0767E9011DABB58A006691F4 /* FacebookShare.framework in Embed Frameworks */,
 				0767E8FB1DABB58A006691F4 /* Bolts.framework in Embed Frameworks */,
 				077897931DC5810E007B011A /* FaveButton.framework in Embed Frameworks */,
-				0767E8FD1DABB58A006691F4 /* FacebookCore.framework in Embed Frameworks */,
 				0705899C1DAC006B00AE4F8D /* Simplicity.framework in Embed Frameworks */,
 				07D69FCB1DAA70D200BBEA05 /* SwiftyJSON.framework in Embed Frameworks */,
 				07008D411DB15A3A00D8210B /* PopupDialog.framework in Embed Frameworks */,
 				0767E9031DABB58A006691F4 /* FBSDKCoreKit.framework in Embed Frameworks */,
 				0767E9071DABB58A006691F4 /* FBSDKShareKit.framework in Embed Frameworks */,
-				0767E8FF1DABB58A006691F4 /* FacebookLogin.framework in Embed Frameworks */,
 				0767E9051DABB58A006691F4 /* FBSDKLoginKit.framework in Embed Frameworks */,
 				07D69FC61DAA709C00BBEA05 /* Alamofire.framework in Embed Frameworks */,
 				07BBC0521DC7C5A300924C77 /* NVActivityIndicatorView.framework in Embed Frameworks */,
@@ -158,6 +146,7 @@
 		0778979F1DC5B084007B011A /* Spark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spark.swift; sourceTree = "<group>"; };
 		077897A41DC60202007B011A /* SwiftAvator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftAvator.swift; sourceTree = "<group>"; };
 		077897A61DC640C1007B011A /* Popover.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Popover.framework; path = ScribbleIt/Popover.framework; sourceTree = "<group>"; };
+		077A64361DC9E8F200702000 /* ArtworkGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkGalleryViewController.swift; sourceTree = "<group>"; };
 		07887DCD1DC7DC4700F98D20 /* ChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		07BBC0451DC7665800924C77 /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
 		07BBC0471DC76D4B00924C77 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
@@ -169,14 +158,10 @@
 		07D69FC81DAA70C900BBEA05 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		07D69FD61DAAA27300BBEA05 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		07D69FD81DABB44B00BBEA05 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
-		07D69FD91DABB44C00BBEA05 /* FacebookCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookCore.framework; path = Carthage/Build/iOS/FacebookCore.framework; sourceTree = "<group>"; };
-		07D69FDA1DABB44C00BBEA05 /* FacebookLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookLogin.framework; path = Carthage/Build/iOS/FacebookLogin.framework; sourceTree = "<group>"; };
-		07D69FDB1DABB44C00BBEA05 /* FacebookShare.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookShare.framework; path = Carthage/Build/iOS/FacebookShare.framework; sourceTree = "<group>"; };
 		07D69FDC1DABB44C00BBEA05 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Carthage/Build/iOS/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		07D69FDD1DABB44C00BBEA05 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Carthage/Build/iOS/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		07D69FDE1DABB44C00BBEA05 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Carthage/Build/iOS/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		07E207011DB10CE3005FA4E8 /* ArtworkGalleryCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkGalleryCellTableViewCell.swift; sourceTree = "<group>"; };
-		07E207031DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtworkGalleryViewController.swift; path = ../ArtworkGalleryViewController.swift; sourceTree = "<group>"; };
 		07E207051DB1266A005FA4E8 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		07E207071DB13DCE005FA4E8 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		2147EA061DC36ADD00F59007 /* sketch_gothic_light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sketch_gothic_light.otf; sourceTree = "<group>"; };
@@ -191,22 +176,16 @@
 				077897A81DC640D1007B011A /* Popover.framework in Frameworks */,
 				07BBC0491DC76D5300924C77 /* Starscream.framework in Frameworks */,
 				0767E9041DABB58A006691F4 /* FBSDKLoginKit.framework in Frameworks */,
-				07D69FE21DABB44C00BBEA05 /* FacebookShare.framework in Frameworks */,
 				07D69FDF1DABB44C00BBEA05 /* Bolts.framework in Frameworks */,
 				0705899B1DAC006B00AE4F8D /* Simplicity.framework in Frameworks */,
 				07D69FE41DABB44C00BBEA05 /* FBSDKLoginKit.framework in Frameworks */,
 				07008D401DB15A3A00D8210B /* PopupDialog.framework in Frameworks */,
-				0767E9001DABB58A006691F4 /* FacebookShare.framework in Frameworks */,
 				0767E8FA1DABB58A006691F4 /* Bolts.framework in Frameworks */,
 				07D69FCA1DAA70D200BBEA05 /* SwiftyJSON.framework in Frameworks */,
-				0767E8FC1DABB58A006691F4 /* FacebookCore.framework in Frameworks */,
 				07D69FC41DAA6E7200BBEA05 /* Alamofire.framework in Frameworks */,
 				07BBC0511DC7C5A300924C77 /* NVActivityIndicatorView.framework in Frameworks */,
-				07D69FE11DABB44C00BBEA05 /* FacebookLogin.framework in Frameworks */,
 				07D69FE51DABB44C00BBEA05 /* FBSDKShareKit.framework in Frameworks */,
-				07D69FE01DABB44C00BBEA05 /* FacebookCore.framework in Frameworks */,
 				077897921DC5810E007B011A /* FaveButton.framework in Frameworks */,
-				0767E8FE1DABB58A006691F4 /* FacebookLogin.framework in Frameworks */,
 				07D69FC51DAA709C00BBEA05 /* Alamofire.framework in Frameworks */,
 				0767E9061DABB58A006691F4 /* FBSDKShareKit.framework in Frameworks */,
 				0767E9021DABB58A006691F4 /* FBSDKCoreKit.framework in Frameworks */,
@@ -277,7 +256,7 @@
 				07D69FD61DAAA27300BBEA05 /* LoginViewController.swift */,
 				074F979B1DAC105C0081BA56 /* MenuViewController.swift */,
 				070076AF1D9E36C80017D22C /* ViewController.swift */,
-				07E207031DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift */,
+				077A64361DC9E8F200702000 /* ArtworkGalleryViewController.swift */,
 				07E207011DB10CE3005FA4E8 /* ArtworkGalleryCellTableViewCell.swift */,
 				074543181DB235A800B397AA /* TemplateCollectionViewController.swift */,
 				07E207051DB1266A005FA4E8 /* TestViewController.swift */,
@@ -323,9 +302,6 @@
 				07D69FC81DAA70C900BBEA05 /* SwiftyJSON.framework */,
 				07D69FC31DAA6E7200BBEA05 /* Alamofire.framework */,
 				07D69FD81DABB44B00BBEA05 /* Bolts.framework */,
-				07D69FD91DABB44C00BBEA05 /* FacebookCore.framework */,
-				07D69FDA1DABB44C00BBEA05 /* FacebookLogin.framework */,
-				07D69FDB1DABB44C00BBEA05 /* FacebookShare.framework */,
 				07D69FDC1DABB44C00BBEA05 /* FBSDKCoreKit.framework */,
 				07D69FDD1DABB44C00BBEA05 /* FBSDKLoginKit.framework */,
 				07D69FDE1DABB44C00BBEA05 /* FBSDKShareKit.framework */,
@@ -485,13 +461,13 @@
 				07BBC0461DC7665800924C77 /* LobbyViewController.swift in Sources */,
 				077897981DC5AF6E007B011A /* Constraints+.swift in Sources */,
 				070076DC1D9E675B0017D22C /* SwiftColorPickerViewController.swift in Sources */,
-				07E207041DB10EEE005FA4E8 /* ArtworkGalleryViewController.swift in Sources */,
 				0778979A1DC5AF6E007B011A /* Geometry.swift in Sources */,
 				077897991DC5AF6E007B011A /* Easing.swift in Sources */,
 				077897A11DC5B084007B011A /* FaveIcon.swift in Sources */,
 				0745431D1DB239F200B397AA /* TemplateCollectionViewCell.swift in Sources */,
 				070076B01D9E36C80017D22C /* ViewController.swift in Sources */,
 				074F979C1DAC105C0081BA56 /* MenuViewController.swift in Sources */,
+				077A64371DC9E8F200702000 /* ArtworkGalleryViewController.swift in Sources */,
 				07736AED1DAA005B002BA895 /* ColorSlider.swift in Sources */,
 				07E207021DB10CE3005FA4E8 /* ArtworkGalleryCellTableViewCell.swift in Sources */,
 				074543191DB235A800B397AA /* TemplateCollectionViewController.swift in Sources */,
@@ -664,6 +640,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = FQ.ScribbleIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -685,6 +662,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = FQ.ScribbleIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
