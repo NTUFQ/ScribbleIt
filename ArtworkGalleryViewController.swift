@@ -13,6 +13,7 @@ import FaveButton
 import Popover
 import PopupDialog
 import NVActivityIndicatorView
+//import FBSDKShareKit
 class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var artworkTableView: UITableView!
@@ -76,6 +77,7 @@ class ArtworkGalleryViewController: UIViewController, UITableViewDataSource, UIT
         print("posted!!!")
     }
     
+
     @IBAction func deleteArtwork(_ sender: AnyObject) {
         let popup = PopupDialog(title: "Do you want to delete this artwork?", message: nil)
         let button1 = DefaultButton(title: "Delete") {

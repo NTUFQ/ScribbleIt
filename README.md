@@ -1,7 +1,10 @@
 # ScribbleIt
 
-## Backend
-Backend uses Django. [See here](https://github.com/NTUFQ/ScribbleIt-Backend/)
+## Version Control 
+Git/Github is used for version control. [Github Link](https://github.com/NTUFQ/ScribbleIt)
+
+## Info Backend
+Backend uses Django. To see backend at Github: [Github Link](https://github.com/NTUFQ/ScribbleIt-Backend/).
 
 
 ## Todo
@@ -9,24 +12,24 @@ Backend uses Django. [See here](https://github.com/NTUFQ/ScribbleIt-Backend/)
 - [x] Login/Logout
 - [x] Draw (draw, color/color slider, opacity, brash width, shapes, undo, clear, save)
 - [x] View user's profile
-- [ ] Improve drawing with more features (text, brash shape, fill, template)
+- [x] Improve drawing with more features (text, brash shape, fill, template)
 - API
 - [x] Integrate Facebook Login API
 - [ ] Integrate Facebook Share API
 - [x] Integrate backend API
 - UI
-- [ ] Build basic flow
-- [ ] Add all static component
-- [ ] Add actions
-- [ ] Beautify UI
+- [x] Build basic flow
+- [x] Add all static component
+- [x] Add actions
+- [x] Beautify UI
 
 ## Getting Started
 ### 2RUN
--> You should at first have a M(H)acintosh, prefered in El Capitan (coz Sierra keeps crashing😭)
+-> You should at first have a M(H)acintosh, prefered in El Capitan/Sierra.
 
--> Then install XCode from App Store
+-> Then install latest XCode(version 8 or later) from App Store
 
--> Download/Clone this project and open the ScribbleIt.xcodeproj
+-> Download/Clone this project and open the '''ScribbleIt.xcodeproj'''
 
 -> Choose iPad simulator/your own iPad (>=iOS8, code signing required) to build and run
 ### 2LEARN
