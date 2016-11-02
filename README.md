@@ -3,7 +3,7 @@
 ## Version Control 
 Git/Github is used for version control. [Github Link](https://github.com/NTUFQ/ScribbleIt)
 
-## Info Backend
+## Backend Info
 Backend uses Django. To see backend at Github: [Github Link](https://github.com/NTUFQ/ScribbleIt-Backend/).
 
 
