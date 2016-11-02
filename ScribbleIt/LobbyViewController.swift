@@ -64,10 +64,8 @@ class LobbyViewController: UIViewController {
                 socket.disconnect()
                 self.toDrawing()
             }
-//            if json["type"] == "start" && (json["user_id"].stringValue != self.id) {
-//                
-//            }
         }
+        socket.connect()
 //        socket.onData = {
 //            data in
 //            let json = JSON(data: data)
@@ -79,7 +77,6 @@ class LobbyViewController: UIViewController {
 //                socket.write(string: myData!)
 //            }
 //        }
-        socket.connect()
         // Do any additional setup after loading the view.
     }
     
