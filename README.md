@@ -51,15 +51,24 @@ PLS Make use of Google, Stackoverflow and Apple's documents.
 
 -> [Facebook SDK to login and share](https://developers.facebook.com/docs/facebook-login/ios)
 
-ps: Goddamn FB only gives Objective-C tutorial
+ps: FB only gives Objective-C tutorial
 
 -> [Simplicity to handle FB login (not used)](http://cocoadocs.org/docsets/Simplicity/2.0.1/index.html)
 
 -> [Color slider](https://github.com/gizmosachin/ColorSlider)
 
+-> [StarScream for Websocket connection](https://github.com/daltoniam/Starscream)
+
+-> [Fave Button](https://github.com/xhamr/fave-button)
+
+-> [Popover](https://github.com/corin8823/Popover)
+
+-> [PopupDialogue](https://github.com/Orderella/PopupDialog)
 #### some tutorials or videos i found useful
 
 -> ["Unwind Segue" video, when you dont know to the transit between the view controllors](https://www.youtube.com/watch?v=akmPXZ4hDuU)
+
+-> Implementation of protocal/delegate pattern in swift
 
 -> [Standford Swift Course 2016 video, good but only if you have time](https://www.youtube.com/watch?v=_lRx1zoriPo&list=PLsJq-VuSo2k26duIWzNjXztkZ7VrbppkT)
 
